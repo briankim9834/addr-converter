@@ -6,7 +6,7 @@ export default function Home() {
     <div className="max-w-2xl mx-auto px-4 py-8">
       <div className="text-center mb-8">
         <h1 className="text-xl font-extrabold text-indigo-950 mb-2">
-          자주 쓰는 유틸 도구 모음
+          자주 쓰는 도구 모음
         </h1>
         <p className="text-gray-500 text-sm">업무와 일상에서 바로 쓸 수 있는 도구들</p>
       </div>

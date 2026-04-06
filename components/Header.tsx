@@ -7,7 +7,7 @@ export default function Header() {
       <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href="/" className="flex flex-col">
           <span className="text-white font-extrabold text-base leading-tight tracking-tight">
-            ⚡ 유틸모음
+            ⚡ 도구함
           </span>
           <span className="text-white/60 text-xs">직장인을 위한 실용 도구들</span>
         </Link>
