@@ -1,0 +1,156 @@
+<h2>영문주소 변환기 — 레이아웃 개선안</h2>
+<p class="subtitle">세로 흐름 + 좁은 폭 + 항목명 전체 표기 버전이에요</p>
+
+<div style="display:flex;gap:24px;align-items:flex-start;justify-content:center">
+
+  <!-- 실제 서비스 폭으로 제한된 컨테이너 -->
+  <div style="width:480px;flex-shrink:0">
+    <div class="mockup">
+      <div class="mockup-header">PC 화면 — 중앙 정렬, 적정 폭 (max-width 560px)</div>
+      <div class="mockup-body" style="padding:0;background:#F5F3FF">
+
+        <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:10px 16px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="color:white;font-size:12px;font-weight:800">⚡ 유틸모음</div>
+            <div style="color:rgba(255,255,255,0.6);font-size:8px">직장인을 위한 실용 도구들</div>
+          </div>
+          <div style="color:rgba(255,255,255,0.8);font-size:9px">도구 ▾</div>
+        </div>
+
+        <div style="padding:14px">
+          <div style="font-size:13px;font-weight:800;color:#1E1B4B;margin-bottom:2px">🗺️ 영문주소 변환기</div>
+          <div style="font-size:9px;color:#6B7280;margin-bottom:14px">해외배송·직구 주소 입력이 쉬워져요</div>
+
+          <!-- ① 도로명 검색 -->
+          <div style="background:white;border:1.5px solid #6366F1;border-radius:8px;padding:10px 12px;margin-bottom:6px;box-shadow:0 0 0 3px #EEF2FF">
+            <div style="font-size:8px;color:#6366F1;font-weight:700;margin-bottom:3px">① 도로명 주소 검색 (자동완성)</div>
+            <div style="font-size:10px;color:#374151">서울특별시 강남구 테헤란로 152 ✓</div>
+          </div>
+
+          <!-- ② 상세주소 -->
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:10px 12px;margin-bottom:14px">
+            <div style="font-size:8px;color:#6B7280;font-weight:600;margin-bottom:5px">② 상세주소 입력 <span style="font-weight:400">(동/호수/건물명)</span></div>
+            <div style="display:flex;gap:6px">
+              <div style="flex:1;background:#F5F3FF;border:1px solid #DDD6FE;border-radius:6px;padding:6px 9px;font-size:10px;color:#374151">헬리오시티 101동 1103호</div>
+              <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:6px 10px;border-radius:6px;font-size:9px;font-weight:600;cursor:pointer;white-space:nowrap">영문 변환</div>
+            </div>
+          </div>
+
+          <!-- 결과 영역 -->
+          <div style="font-size:8px;font-weight:700;color:#6366F1;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:8px">변환 결과 — 항목별 복사</div>
+
+          <div style="display:grid;gap:6px">
+
+            <!-- Address Line 1 -->
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:11px 13px">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px">
+                <div>
+                  <span style="font-size:9px;font-weight:700;color:#1E1B4B">Street Address 1</span>
+                  <span style="font-size:8px;color:#9CA3AF;margin-left:4px">/ Address Line 1</span>
+                </div>
+                <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 9px;border-radius:5px;font-size:8px;cursor:pointer;flex-shrink:0;margin-left:8px">📋 복사</div>
+              </div>
+              <div style="font-size:11px;font-weight:500;color:#111827">152 Teheran-ro, Gangnam-gu</div>
+            </div>
+
+            <!-- Address Line 2 -->
+            <div style="background:white;border:1.5px solid #F59E0B;border-radius:10px;padding:11px 13px">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px">
+                <div>
+                  <span style="font-size:9px;font-weight:700;color:#1E1B4B">Street Address 2</span>
+                  <span style="font-size:8px;color:#9CA3AF;margin-left:4px">/ Address Line 2</span>
+                </div>
+                <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 9px;border-radius:5px;font-size:8px;cursor:pointer;flex-shrink:0;margin-left:8px">📋 복사</div>
+              </div>
+              <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:6px;padding:7px 9px;font-size:11px;font-weight:500;color:#111827;margin-bottom:5px">
+                Helio City Apt 101, Unit 1103 <span style="color:#D97706;font-size:9px">✏️</span>
+              </div>
+              <div style="font-size:8px;color:#B45309">⚠️ AI 번역 결과예요. 클릭해서 수정 후 복사하세요.</div>
+            </div>
+
+            <!-- City -->
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:11px 13px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <span style="font-size:9px;font-weight:700;color:#1E1B4B">City</span>
+                  <div style="font-size:11px;font-weight:500;color:#111827;margin-top:3px">Seoul</div>
+                </div>
+                <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 9px;border-radius:5px;font-size:8px;cursor:pointer">📋 복사</div>
+              </div>
+            </div>
+
+            <!-- State -->
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:11px 13px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <span style="font-size:9px;font-weight:700;color:#1E1B4B">State</span>
+                  <span style="font-size:8px;color:#9CA3AF;margin-left:4px">/ Province / Region</span>
+                  <div style="font-size:11px;font-weight:500;color:#111827;margin-top:3px">Seoul</div>
+                </div>
+                <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 9px;border-radius:5px;font-size:8px;cursor:pointer">📋 복사</div>
+              </div>
+            </div>
+
+            <!-- ZIP -->
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:11px 13px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <span style="font-size:9px;font-weight:700;color:#1E1B4B">Zip Code</span>
+                  <span style="font-size:8px;color:#9CA3AF;margin-left:4px">/ Postal Code</span>
+                  <div style="font-size:11px;font-weight:500;color:#111827;margin-top:3px">06142</div>
+                </div>
+                <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 9px;border-radius:5px;font-size:8px;cursor:pointer">📋 복사</div>
+              </div>
+            </div>
+
+            <!-- Country -->
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:11px 13px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div>
+                  <span style="font-size:9px;font-weight:700;color:#1E1B4B">Country</span>
+                  <div style="font-size:11px;font-weight:500;color:#111827;margin-top:3px">South Korea</div>
+                </div>
+                <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 9px;border-radius:5px;font-size:8px;cursor:pointer">📋 복사</div>
+              </div>
+            </div>
+
+            <!-- 전체 복사 -->
+            <div style="background:linear-gradient(135deg,#4F46E5,#7C3AED);border-radius:10px;padding:13px 15px;display:flex;justify-content:space-between;align-items:center;margin-top:2px">
+              <div style="flex:1">
+                <div style="font-size:8px;color:rgba(255,255,255,0.65);margin-bottom:4px;font-weight:600">전체 주소 한 번에 복사</div>
+                <div style="font-size:9px;color:white;line-height:1.6">152 Teheran-ro, Helio City Apt 101 Unit 1103,<br>Gangnam-gu, Seoul 06142, South Korea</div>
+              </div>
+              <div style="background:white;color:#4F46E5;padding:7px 13px;border-radius:7px;font-size:9px;font-weight:700;cursor:pointer;white-space:nowrap;margin-left:12px">전체 복사</div>
+            </div>
+
+          </div>
+
+          <!-- 사이트별 가이드 -->
+          <div style="margin-top:14px">
+            <div style="font-size:8px;font-weight:700;color:#6366F1;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:7px">사이트별 입력 가이드</div>
+            <div style="display:flex;gap:4px;margin-bottom:7px;flex-wrap:wrap">
+              <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:4px 11px;border-radius:20px;font-size:8px;font-weight:700">🛒 Amazon</div>
+              <div style="background:#F3F4F6;color:#6B7280;padding:4px 11px;border-radius:20px;font-size:8px">🛍️ AliExpress</div>
+              <div style="background:#F3F4F6;color:#6B7280;padding:4px 11px;border-radius:20px;font-size:8px">📦 몰테일</div>
+            </div>
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:9px;font-size:8px;color:#374151;line-height:1.8">
+              <div style="display:flex;gap:8px"><span style="color:#9CA3AF;width:110px;flex-shrink:0">Full Name</span><span style="color:#6366F1">홍길동 (영문이름 사용)</span></div>
+              <div style="display:flex;gap:8px"><span style="color:#9CA3AF;width:110px;flex-shrink:0">Address Line 1</span><span>152 Teheran-ro, Gangnam-gu</span></div>
+              <div style="display:flex;gap:8px"><span style="color:#9CA3AF;width:110px;flex-shrink:0">Address Line 2</span><span>Helio City Apt 101, Unit 1103</span></div>
+              <div style="display:flex;gap:8px"><span style="color:#9CA3AF;width:110px;flex-shrink:0">City</span><span>Seoul</span></div>
+              <div style="display:flex;gap:8px"><span style="color:#9CA3AF;width:110px;flex-shrink:0">State/Province</span><span>Seoul</span></div>
+              <div style="display:flex;gap:8px"><span style="color:#9CA3AF;width:110px;flex-shrink:0">Zip Code</span><span>06142</span></div>
+              <div style="display:flex;gap:8px"><span style="color:#9CA3AF;width:110px;flex-shrink:0">Country</span><span>South Korea</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:12px;padding:10px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:11px;color:#166534">
+  ✅ 이 레이아웃이 맞으면 확인해주세요. 최종 확정 후 스펙 문서 작성으로 넘어갈게요!
+</div>

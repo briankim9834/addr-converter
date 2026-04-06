@@ -1,0 +1,159 @@
+<h2>영문주소 변환기 — 최종 레이아웃 확인</h2>
+<p class="subtitle">상세주소 편집 가능 필드 + 안내 문구 포함 버전이에요. 전체 흐름을 확인해주세요.</p>
+
+<div class="mockup">
+  <div class="mockup-header">영문주소 변환기 — 전체 페이지 흐름</div>
+  <div class="mockup-body">
+
+    <!-- 입력 영역 -->
+    <div style="margin-bottom:16px">
+      <div style="font-size:10px;font-weight:700;color:#4F46E5;margin-bottom:8px;letter-spacing:0.5px">① 주소 입력</div>
+
+      <div style="background:white;border:1.5px solid #4F46E5;border-radius:8px;padding:10px;display:flex;align-items:center;gap:8px;margin-bottom:6px;box-shadow:0 0 0 3px #EEF2FF">
+        <span style="font-size:14px">🔍</span>
+        <div style="flex:1">
+          <div style="font-size:9px;color:#4F46E5;margin-bottom:2px;font-weight:600">도로명 주소 검색 (자동완성)</div>
+          <div style="font-size:11px;color:#374151">서울특별시 강남구 테헤란로 152</div>
+        </div>
+        <div style="background:#4F46E5;color:white;padding:3px 8px;border-radius:4px;font-size:9px">검색</div>
+      </div>
+
+      <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:10px;gap:8px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+          <span style="font-size:14px">🏢</span>
+          <div style="font-size:9px;color:#6B7280;font-weight:600">상세주소 입력 <span style="font-weight:400">(동/호수/건물명)</span></div>
+        </div>
+        <div style="display:flex;gap:6px">
+          <div style="flex:1;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:6px;padding:7px 10px;font-size:11px;color:#374151">헬리오시티 101동 1103호</div>
+          <div style="background:#4F46E5;color:white;padding:7px 10px;border-radius:6px;font-size:10px;cursor:pointer;white-space:nowrap">영문 변환</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 변환 결과 -->
+    <div>
+      <div style="font-size:10px;font-weight:700;color:#4F46E5;margin-bottom:8px;letter-spacing:0.5px">② 변환 결과</div>
+
+      <div style="display:grid;gap:6px">
+
+        <!-- Address Line 1 -->
+        <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:12px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+            <div>
+              <span style="font-size:9px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:0.5px">Address Line 1</span>
+              <span style="font-size:8px;color:#9CA3AF;margin-left:6px">도로명 주소</span>
+            </div>
+            <div style="background:#4F46E5;color:white;padding:4px 10px;border-radius:6px;font-size:9px;cursor:pointer">📋 복사</div>
+          </div>
+          <div style="font-size:12px;font-weight:500;color:#111827">152 Teheran-ro, Gangnam-gu</div>
+        </div>
+
+        <!-- Address Line 2 — 편집 가능 + 경고 -->
+        <div style="background:white;border:2px solid #F59E0B;border-radius:10px;padding:12px">
+          <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:6px">
+            <div>
+              <span style="font-size:9px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:0.5px">Address Line 2</span>
+              <span style="font-size:8px;color:#9CA3AF;margin-left:6px">상세주소 (편집 가능)</span>
+            </div>
+            <div style="background:#4F46E5;color:white;padding:4px 10px;border-radius:6px;font-size:9px;cursor:pointer">📋 복사</div>
+          </div>
+          <!-- 편집 가능한 입력 필드 -->
+          <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:6px;padding:8px;font-size:12px;font-weight:500;color:#111827;margin-bottom:6px">
+            Helio City Apt 101, Unit 1103
+            <span style="color:#D97706;font-size:10px;margin-left:4px">✏️</span>
+          </div>
+          <!-- 안내 문구 -->
+          <div style="display:flex;align-items:flex-start;gap:5px;background:#FFFBEB;border-radius:6px;padding:6px 8px">
+            <span style="font-size:11px;flex-shrink:0">⚠️</span>
+            <div style="font-size:9px;color:#92400E;line-height:1.5">
+              건물명은 AI가 자동 번역한 결과예요. 정확하지 않을 수 있으니 <strong>직접 클릭해서 수정 후 복사</strong>하세요. 공식 영문 표기는 건물/아파트 관리사무소에서 확인할 수 있어요.
+            </div>
+          </div>
+        </div>
+
+        <!-- City / State / ZIP -->
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:#6B7280;font-weight:700;margin-bottom:4px">City</div>
+            <div style="font-size:12px;font-weight:600;margin-bottom:6px">Seoul</div>
+            <div style="background:#4F46E5;color:white;padding:3px 0;border-radius:4px;font-size:9px;cursor:pointer">📋 복사</div>
+          </div>
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:#6B7280;font-weight:700;margin-bottom:4px">State</div>
+            <div style="font-size:12px;font-weight:600;margin-bottom:6px">Seoul</div>
+            <div style="background:#4F46E5;color:white;padding:3px 0;border-radius:4px;font-size:9px;cursor:pointer">📋 복사</div>
+          </div>
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:10px;text-align:center">
+            <div style="font-size:9px;color:#6B7280;font-weight:700;margin-bottom:4px">ZIP Code</div>
+            <div style="font-size:12px;font-weight:600;margin-bottom:6px">06142</div>
+            <div style="background:#4F46E5;color:white;padding:3px 0;border-radius:4px;font-size:9px;cursor:pointer">📋 복사</div>
+          </div>
+        </div>
+
+        <!-- Country -->
+        <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:12px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-size:9px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:3px">Country</div>
+            <div style="font-size:12px;font-weight:500">South Korea</div>
+          </div>
+          <div style="background:#4F46E5;color:white;padding:5px 10px;border-radius:6px;font-size:9px;cursor:pointer">📋 복사</div>
+        </div>
+
+        <!-- 전체 복사 -->
+        <div style="background:linear-gradient(135deg,#4F46E5,#7C3AED);border-radius:10px;padding:14px;display:flex;justify-content:space-between;align-items:center">
+          <div style="flex:1">
+            <div style="font-size:9px;color:rgba(255,255,255,0.7);font-weight:600;margin-bottom:4px">전체 주소 (한 번에 복사)</div>
+            <div style="font-size:10px;color:white;line-height:1.5">152 Teheran-ro, Helio City Apt 101 Unit 1103,<br>Gangnam-gu, Seoul 06142, South Korea</div>
+          </div>
+          <div style="background:white;color:#4F46E5;padding:8px 14px;border-radius:6px;font-size:10px;font-weight:700;cursor:pointer;white-space:nowrap;margin-left:12px">전체 복사</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 사이트별 가이드 -->
+    <div style="margin-top:16px">
+      <div style="font-size:10px;font-weight:700;color:#4F46E5;margin-bottom:8px;letter-spacing:0.5px">③ 사이트별 입력 가이드</div>
+      <div style="display:flex;gap:4px;margin-bottom:8px;flex-wrap:wrap">
+        <div style="background:#4F46E5;color:white;padding:4px 12px;border-radius:20px;font-size:10px;font-weight:600">🛒 Amazon</div>
+        <div style="background:#F3F4F6;color:#6B7280;padding:4px 12px;border-radius:20px;font-size:10px">🛍️ AliExpress</div>
+        <div style="background:#F3F4F6;color:#6B7280;padding:4px 12px;border-radius:20px;font-size:10px">📦 몰테일</div>
+        <div style="background:#F3F4F6;color:#6B7280;padding:4px 12px;border-radius:20px;font-size:10px">+ 더보기</div>
+      </div>
+      <div style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:10px;font-size:10px">
+        <div style="font-weight:600;margin-bottom:8px">Amazon 주소 입력창 기준</div>
+        <div style="display:grid;gap:5px">
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="font-size:9px;color:#6B7280;width:110px;flex-shrink:0">Address Line 1</div>
+            <div style="background:#EEF2FF;padding:4px 8px;border-radius:4px;font-size:9px;color:#4338CA;flex:1">152 Teheran-ro, Gangnam-gu</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="font-size:9px;color:#6B7280;width:110px;flex-shrink:0">Address Line 2</div>
+            <div style="background:#EEF2FF;padding:4px 8px;border-radius:4px;font-size:9px;color:#4338CA;flex:1">Helio City Apt 101, Unit 1103</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="font-size:9px;color:#6B7280;width:110px;flex-shrink:0">City</div>
+            <div style="background:#EEF2FF;padding:4px 8px;border-radius:4px;font-size:9px;color:#4338CA;flex:1">Seoul</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="font-size:9px;color:#6B7280;width:110px;flex-shrink:0">State / Province</div>
+            <div style="background:#EEF2FF;padding:4px 8px;border-radius:4px;font-size:9px;color:#4338CA;flex:1">Seoul</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="font-size:9px;color:#6B7280;width:110px;flex-shrink:0">ZIP / Postal Code</div>
+            <div style="background:#EEF2FF;padding:4px 8px;border-radius:4px;font-size:9px;color:#4338CA;flex:1">06142</div>
+          </div>
+          <div style="display:flex;gap:8px;align-items:center">
+            <div style="font-size:9px;color:#6B7280;width:110px;flex-shrink:0">Country</div>
+            <div style="background:#EEF2FF;padding:4px 8px;border-radius:4px;font-size:9px;color:#4338CA;flex:1">South Korea</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div style="margin-top:12px;padding:12px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:11px;color:#166534">
+  ✅ 이 레이아웃이 최종안이에요. 괜찮으면 확인해주세요 — 디자인 스펙 문서 작성으로 넘어갈게요!
+</div>

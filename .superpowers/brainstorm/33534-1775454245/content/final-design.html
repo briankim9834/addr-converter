@@ -1,0 +1,130 @@
+<h2>최종 설계 확인</h2>
+<p class="subtitle">지금까지 결정된 내용을 전부 합친 최종안이에요. 확인 후 OK 주시면 스펙 문서를 작성할게요.</p>
+
+<div class="split">
+
+  <!-- 왼쪽: 홈 페이지 -->
+  <div class="mockup">
+    <div class="mockup-header">홈 페이지 (engaddr.kr)</div>
+    <div class="mockup-body" style="padding:0;background:#F5F3FF">
+      <!-- 네비 -->
+      <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:10px 14px;display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div style="color:white;font-size:12px;font-weight:800;letter-spacing:-0.3px">⚡ 유틸모음</div>
+          <div style="color:rgba(255,255,255,0.6);font-size:8px;margin-top:1px">직장인을 위한 실용 도구들</div>
+        </div>
+        <div style="color:rgba(255,255,255,0.8);font-size:8px">도구 ▾</div>
+      </div>
+      <!-- 히어로 -->
+      <div style="padding:16px 14px 12px;text-align:center">
+        <div style="font-size:13px;font-weight:800;color:#1E1B4B;margin-bottom:4px">자주 쓰는 유틸 도구 모음</div>
+        <div style="font-size:9px;color:#6B7280">업무와 일상에서 바로 쓸 수 있는 도구들</div>
+      </div>
+      <!-- 도구 카드 그리드 -->
+      <div style="padding:0 14px 16px;display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <div style="background:white;border-radius:10px;padding:12px;box-shadow:0 1px 4px rgba(99,102,241,0.12)">
+          <div style="font-size:20px;margin-bottom:6px">🗺️</div>
+          <div style="font-size:10px;font-weight:700;color:#1E1B4B;margin-bottom:3px">영문주소 변환기</div>
+          <div style="font-size:8px;color:#6B7280;line-height:1.4">한글 주소를 항목별 영문으로 변환</div>
+          <div style="margin-top:8px;background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:4px 0;border-radius:6px;font-size:8px;text-align:center;font-weight:600">바로 사용 →</div>
+        </div>
+        <div style="background:white;border-radius:10px;padding:12px;box-shadow:0 1px 4px rgba(0,0,0,0.04);border:1.5px dashed #DDD6FE;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center">
+          <div style="font-size:18px;margin-bottom:4px;color:#A5B4FC">➕</div>
+          <div style="font-size:9px;color:#A5B4FC">도구 추가 예정</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 오른쪽: 도구 페이지 -->
+  <div class="mockup">
+    <div class="mockup-header">영문주소 변환기 (/address)</div>
+    <div class="mockup-body" style="padding:0;background:#F9FAFB">
+      <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:8px 12px">
+        <div style="color:white;font-size:10px;font-weight:700">⚡ 유틸모음</div>
+      </div>
+
+      <div style="padding:10px">
+        <!-- 페이지 타이틀 -->
+        <div style="margin-bottom:10px">
+          <div style="font-size:12px;font-weight:800;color:#1E1B4B">🗺️ 영문주소 변환기</div>
+          <div style="font-size:8px;color:#6B7280;margin-top:2px">해외배송·직구 주소 입력이 쉬워져요</div>
+        </div>
+
+        <!-- ① 도로명 검색 -->
+        <div style="background:white;border:1.5px solid #6366F1;border-radius:8px;padding:8px;margin-bottom:5px;box-shadow:0 0 0 3px #EEF2FF">
+          <div style="font-size:8px;color:#6366F1;font-weight:600;margin-bottom:3px">① 도로명 주소 검색</div>
+          <div style="font-size:9px;color:#374151">서울특별시 강남구 테헤란로 152 ✓</div>
+        </div>
+
+        <!-- ② 상세주소 -->
+        <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:8px;margin-bottom:10px">
+          <div style="font-size:8px;color:#6B7280;font-weight:600;margin-bottom:3px">② 상세주소 <span style="font-weight:400">(동/호수/건물명)</span></div>
+          <div style="display:flex;gap:4px">
+            <div style="flex:1;background:#F5F3FF;border:1px solid #DDD6FE;border-radius:5px;padding:5px 7px;font-size:9px;color:#374151">헬리오시티 101동 1103호</div>
+            <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:5px 7px;border-radius:5px;font-size:8px;white-space:nowrap">영문변환</div>
+          </div>
+        </div>
+
+        <!-- 결과 카드들 -->
+        <div style="font-size:8px;font-weight:700;color:#6366F1;margin-bottom:5px;letter-spacing:0.5px;text-transform:uppercase">변환 결과</div>
+        <div style="display:grid;gap:4px">
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:7px;padding:7px 9px;display:flex;justify-content:space-between;align-items:center">
+            <div><div style="font-size:7px;color:#9CA3AF;font-weight:600;margin-bottom:1px">ADDRESS LINE 1</div><div style="font-size:9px;font-weight:500">152 Teheran-ro, Gangnam-gu</div></div>
+            <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 7px;border-radius:4px;font-size:7px">📋</div>
+          </div>
+          <div style="background:white;border:1.5px solid #F59E0B;border-radius:7px;padding:7px 9px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+              <div style="font-size:7px;color:#9CA3AF;font-weight:600">ADDRESS LINE 2 <span style="color:#F59E0B">✏️ 편집가능</span></div>
+              <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 7px;border-radius:4px;font-size:7px">📋</div>
+            </div>
+            <div style="background:#FFFBEB;border-radius:4px;padding:4px 6px;font-size:9px;font-weight:500">Helio City Apt 101, Unit 1103</div>
+            <div style="font-size:7px;color:#B45309;margin-top:3px">⚠️ AI 번역 — 확인 후 수정하세요</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px">
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:7px;padding:6px;text-align:center"><div style="font-size:7px;color:#9CA3AF;margin-bottom:2px">CITY</div><div style="font-size:9px;font-weight:600">Seoul</div><div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;border-radius:3px;font-size:7px;padding:2px;margin-top:3px">📋</div></div>
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:7px;padding:6px;text-align:center"><div style="font-size:7px;color:#9CA3AF;margin-bottom:2px">STATE</div><div style="font-size:9px;font-weight:600">Seoul</div><div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;border-radius:3px;font-size:7px;padding:2px;margin-top:3px">📋</div></div>
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:7px;padding:6px;text-align:center"><div style="font-size:7px;color:#9CA3AF;margin-bottom:2px">ZIP</div><div style="font-size:9px;font-weight:600">06142</div><div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;border-radius:3px;font-size:7px;padding:2px;margin-top:3px">📋</div></div>
+          </div>
+          <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);border-radius:7px;padding:8px;display:flex;justify-content:space-between;align-items:center">
+            <div style="font-size:8px;color:rgba(255,255,255,0.85);flex:1">152 Teheran-ro, Helio City Apt 101<br>Unit 1103, Seoul 06142, Korea</div>
+            <div style="background:white;color:#6366F1;padding:4px 8px;border-radius:4px;font-size:8px;font-weight:700;white-space:nowrap;margin-left:6px">전체복사</div>
+          </div>
+        </div>
+
+        <!-- 사이트 가이드 -->
+        <div style="margin-top:8px">
+          <div style="display:flex;gap:3px;margin-bottom:5px">
+            <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 8px;border-radius:12px;font-size:8px;font-weight:600">Amazon</div>
+            <div style="background:#F3F4F6;color:#6B7280;padding:3px 8px;border-radius:12px;font-size:8px">AliExpress</div>
+            <div style="background:#F3F4F6;color:#6B7280;padding:3px 8px;border-radius:12px;font-size:8px">몰테일</div>
+          </div>
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:7px;padding:7px;font-size:8px;color:#374151">
+            Amazon 기준 입력 가이드 표시 영역
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:16px;background:white;border:1px solid #E5E7EB;border-radius:10px;padding:14px">
+  <div style="font-size:11px;font-weight:700;color:#1E1B4B;margin-bottom:10px">📋 최종 확정 사항 요약</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:10px">
+    <div><span style="color:#6B7280">서비스 구조</span><br><strong>멀티유틸 플랫폼 (영문주소 먼저)</strong></div>
+    <div><span style="color:#6B7280">기술 스택</span><br><strong>Next.js + Tailwind CSS</strong></div>
+    <div><span style="color:#6B7280">주소 검색</span><br><strong>카카오 우편번호 API</strong></div>
+    <div><span style="color:#6B7280">영문 변환</span><br><strong>JUSO API (행안부)</strong></div>
+    <div><span style="color:#6B7280">상세주소 번역</span><br><strong>Papago API (편집 가능)</strong></div>
+    <div><span style="color:#6B7280">배포</span><br><strong>Vercel (무료)</strong></div>
+    <div><span style="color:#6B7280">도메인</span><br><strong>engaddr.kr (구매 예정)</strong></div>
+    <div><span style="color:#6B7280">수익화</span><br><strong>Google AdSense (추후)</strong></div>
+    <div><span style="color:#6B7280">디자인</span><br><strong>인디고+퍼플, 모던</strong></div>
+    <div><span style="color:#6B7280">타겟</span><br><strong>20-30대 직장인</strong></div>
+  </div>
+</div>
+
+<div style="margin-top:10px;padding:10px 12px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:11px;color:#166534">
+  ✅ 이 내용으로 확정되면 터미널에서 알려주세요. 바로 스펙 문서를 작성할게요!
+</div>

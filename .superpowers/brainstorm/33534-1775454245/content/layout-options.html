@@ -1,0 +1,113 @@
+<h2>사이트 전체 레이아웃 구조</h2>
+<p class="subtitle">멀티 유틸 플랫폼으로 성장할 수 있는 구조 3가지 — 클릭해서 선택해주세요</p>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>심플 단일 툴 포커스</h3>
+      <p>메인 페이지 = 영문주소 변환기. 상단 네비에 "다른 도구" 드롭다운 메뉴로 나중에 유틸 추가.</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">레이아웃 미리보기</div>
+        <div class="mockup-body" style="padding:0">
+          <div style="background:#4F46E5;color:white;padding:8px 12px;font-size:12px;display:flex;justify-content:space-between;align-items:center">
+            <span>⚡ 유틸모음</span>
+            <span style="font-size:11px">영문주소변환 | 도구 ▾ | 이용안내</span>
+          </div>
+          <div style="padding:16px;text-align:center;background:#F9FAFB">
+            <div style="font-size:13px;font-weight:600;margin-bottom:8px">🗺️ 한글 주소 → 영문 주소 변환기</div>
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:6px;padding:8px;font-size:11px;color:#6B7280;margin-bottom:8px">주소를 검색하세요... 🔍</div>
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:6px;padding:10px;text-align:left">
+              <div style="font-size:10px;color:#6B7280;margin-bottom:4px">변환 결과</div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;font-size:10px">
+                <div style="background:#EEF2FF;padding:6px;border-radius:4px">Address Line 1 <span style="float:right">📋</span></div>
+                <div style="background:#EEF2FF;padding:6px;border-radius:4px">Address Line 2 <span style="float:right">📋</span></div>
+                <div style="background:#EEF2FF;padding:6px;border-radius:4px">City <span style="float:right">📋</span></div>
+                <div style="background:#EEF2FF;padding:6px;border-radius:4px">ZIP Code <span style="float:right">📋</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:10px">
+        <div class="pros"><h4>장점</h4><ul><li>첫 방문자에게 목적이 명확</li><li>SEO 집중도 높음</li><li>개발 빠름</li></ul></div>
+        <div class="cons"><h4>단점</h4><ul><li>유틸 늘어나면 구조 개편 필요</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>툴 허브 + 사이드바</h3>
+      <p>왼쪽에 도구 목록, 오른쪽에 선택한 도구. 처음부터 플랫폼 느낌. PC에서 특히 좋음.</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">레이아웃 미리보기</div>
+        <div class="mockup-body" style="padding:0">
+          <div style="background:#4F46E5;color:white;padding:8px 12px;font-size:12px">⚡ 유틸모음</div>
+          <div style="display:flex">
+            <div style="width:90px;background:#F3F4F6;padding:8px;font-size:10px;border-right:1px solid #E5E7EB">
+              <div style="background:#4F46E5;color:white;padding:4px 6px;border-radius:4px;margin-bottom:4px">🗺️ 영문주소</div>
+              <div style="padding:4px 6px;color:#9CA3AF;margin-bottom:4px">🔧 도구2</div>
+              <div style="padding:4px 6px;color:#9CA3AF">🔧 도구3</div>
+            </div>
+            <div style="flex:1;padding:10px;font-size:10px">
+              <div style="font-weight:600;margin-bottom:6px">영문주소 변환기</div>
+              <div style="background:white;border:1px solid #E5E7EB;border-radius:4px;padding:6px;color:#6B7280;margin-bottom:6px">주소 검색... 🔍</div>
+              <div style="background:#EEF2FF;padding:6px;border-radius:4px;font-size:9px">변환 결과 영역</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:10px">
+        <div class="pros"><h4>장점</h4><ul><li>처음부터 확장 구조</li><li>도구 추가가 자연스러움</li></ul></div>
+        <div class="cons"><h4>단점</h4><ul><li>도구 1~2개일 때 사이드바가 허전</li><li>모바일에서 공간 낭비</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>카드형 홈 + 개별 툴 페이지 ⭐ 추천</h3>
+      <p>홈에는 도구 카드 목록, 각 도구는 개별 페이지(/address, /unit-converter 등). SEO와 확장성 모두 최고.</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">홈 페이지</div>
+        <div class="mockup-body" style="padding:0">
+          <div style="background:#4F46E5;color:white;padding:8px 12px;font-size:12px">⚡ 유틸모음</div>
+          <div style="padding:10px;background:#F9FAFB">
+            <div style="font-size:11px;font-weight:600;text-align:center;margin-bottom:8px">자주 쓰는 유틸 도구 모음</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+              <div style="background:white;border:1px solid #E5E7EB;border-radius:6px;padding:8px;font-size:10px">
+                <div style="font-size:16px;margin-bottom:4px">🗺️</div>
+                <div style="font-weight:600">영문주소 변환기</div>
+                <div style="color:#6B7280;font-size:9px">한글 주소를 영문으로</div>
+              </div>
+              <div style="background:#F3F4F6;border:1px dashed #D1D5DB;border-radius:6px;padding:8px;font-size:10px;color:#9CA3AF;text-align:center">
+                <div style="font-size:16px;margin-bottom:4px">➕</div>
+                <div>도구 추가 예정</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mockup" style="margin-top:8px">
+        <div class="mockup-header">/address 페이지 (개별 툴)</div>
+        <div class="mockup-body" style="padding:8px;font-size:10px">
+          <div style="font-weight:600;margin-bottom:6px">🗺️ 영문주소 변환기</div>
+          <div style="background:#F3F4F6;border-radius:4px;padding:6px;color:#6B7280;margin-bottom:6px">주소 검색...</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px">
+            <div style="background:#EEF2FF;padding:5px;border-radius:4px;font-size:9px">Address Line 1 📋</div>
+            <div style="background:#EEF2FF;padding:5px;border-radius:4px;font-size:9px">City 📋</div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:10px">
+        <div class="pros"><h4>장점</h4><ul><li>각 도구가 독립 URL → SEO 최강</li><li>도구 추가가 가장 자연스러움</li><li>모바일/PC 모두 최적화 쉬움</li></ul></div>
+        <div class="cons"><h4>단점</h4><ul><li>초기 페이지가 2개 (홈+도구페이지)</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+</div>

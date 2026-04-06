@@ -1,0 +1,157 @@
+<h2>결과 화면 → 수정/초기화 동선</h2>
+<p class="subtitle">결과를 보다가 주소를 바꾸고 싶을 때의 흐름이에요</p>
+
+<div style="display:flex;gap:16px;align-items:flex-start;justify-content:center;flex-wrap:wrap">
+
+  <!-- 결과 화면 (상단 수정 영역 포함) -->
+  <div style="width:320px">
+    <div style="text-align:center;margin-bottom:8px">
+      <span style="background:#6366F1;color:white;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700">결과 화면</span>
+      <div style="font-size:10px;color:#6B7280;margin-top:4px">상단에 현재 주소 + 수정/초기화 버튼</div>
+    </div>
+    <div class="mockup">
+      <div class="mockup-header">변환 결과 화면</div>
+      <div class="mockup-body" style="background:#F5F3FF;padding:0">
+        <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:9px 14px">
+          <div style="color:white;font-size:11px;font-weight:800">⚡ 유틸모음</div>
+        </div>
+        <div style="padding:14px">
+          <div style="font-size:12px;font-weight:800;color:#1E1B4B;margin-bottom:10px">🗺️ 영문주소 변환기</div>
+
+          <!-- 현재 주소 요약 + 수정/초기화 -->
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:10px;padding:10px 12px;margin-bottom:12px">
+            <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px">
+              <div style="flex:1">
+                <div style="font-size:8px;color:#6B7280;margin-bottom:3px">현재 변환 중인 주소</div>
+                <div style="font-size:10px;font-weight:600;color:#111827">서울 강남구 테헤란로 152</div>
+                <div style="font-size:9px;color:#6B7280;margin-top:1px">헬리오시티 101동 1103호</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:4px;flex-shrink:0">
+                <div style="background:#EEF2FF;color:#6366F1;padding:4px 9px;border-radius:6px;font-size:8px;font-weight:600;cursor:pointer;text-align:center;white-space:nowrap">✏️ 수정</div>
+                <div style="background:#FEF2F2;color:#EF4444;padding:4px 9px;border-radius:6px;font-size:8px;font-weight:600;cursor:pointer;text-align:center;white-space:nowrap">↺ 초기화</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 결과 카드들 (축약) -->
+          <div style="font-size:8px;font-weight:700;color:#6366F1;letter-spacing:0.8px;text-transform:uppercase;margin-bottom:6px">변환 결과</div>
+          <div style="display:grid;gap:5px">
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:9px 11px;display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-size:7px;color:#9CA3AF;margin-bottom:1px">Street Address 1 / Address Line 1</div><div style="font-size:9px;font-weight:500">152 Teheran-ro, Gangnam-gu</div></div>
+              <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 7px;border-radius:4px;font-size:7px;white-space:nowrap">📋 복사</div>
+            </div>
+            <div style="background:white;border:1.5px solid #F59E0B;border-radius:8px;padding:9px 11px">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px">
+                <div style="font-size:7px;color:#9CA3AF">Street Address 2 / Address Line 2 <span style="color:#F59E0B">✏️</span></div>
+                <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 7px;border-radius:4px;font-size:7px">📋 복사</div>
+              </div>
+              <div style="background:#FFFBEB;border-radius:4px;padding:4px 7px;font-size:9px">Helio City Apt 101, Unit 1103</div>
+            </div>
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:9px 11px;display:flex;justify-content:space-between;align-items:center">
+              <div><div style="font-size:7px;color:#9CA3AF;margin-bottom:1px">City</div><div style="font-size:9px;font-weight:500">Seoul</div></div>
+              <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:3px 7px;border-radius:4px;font-size:7px">📋 복사</div>
+            </div>
+            <div style="font-size:8px;color:#9CA3AF;text-align:center;padding:4px">… State, ZIP, Country 카드 계속 …</div>
+            <div style="background:linear-gradient(135deg,#4F46E5,#7C3AED);border-radius:8px;padding:10px 12px;display:flex;justify-content:space-between;align-items:center">
+              <div style="font-size:8px;color:rgba(255,255,255,0.8)">152 Teheran-ro, Helio City...<br>Seoul 06142, South Korea</div>
+              <div style="background:white;color:#4F46E5;padding:4px 10px;border-radius:5px;font-size:8px;font-weight:700;white-space:nowrap;margin-left:8px">전체 복사</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 화살표 -->
+  <div style="display:flex;flex-direction:column;gap:24px;justify-content:center;padding-top:80px">
+    <div style="text-align:center">
+      <div style="font-size:20px">✏️</div>
+      <div style="font-size:9px;color:#6366F1;font-weight:600;margin-top:2px">수정 클릭</div>
+      <div style="font-size:18px;color:#6366F1">→</div>
+    </div>
+    <div style="text-align:center">
+      <div style="font-size:20px">↺</div>
+      <div style="font-size:9px;color:#EF4444;font-weight:600;margin-top:2px">초기화 클릭</div>
+      <div style="font-size:18px;color:#EF4444">→</div>
+    </div>
+  </div>
+
+  <!-- 수정 모드 -->
+  <div style="width:300px">
+    <div style="text-align:center;margin-bottom:8px">
+      <span style="background:#F59E0B;color:white;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700">수정 모드</span>
+      <div style="font-size:10px;color:#6B7280;margin-top:4px">✏️ 수정 — 입력창이 열리고 재변환</div>
+    </div>
+    <div class="mockup">
+      <div class="mockup-header">수정 모드 (결과 위에 인라인 펼침)</div>
+      <div class="mockup-body" style="background:#F5F3FF;padding:14px">
+
+        <div style="background:#FFFBEB;border:1.5px solid #F59E0B;border-radius:10px;padding:11px 12px;margin-bottom:10px">
+          <div style="font-size:8px;color:#D97706;font-weight:700;margin-bottom:6px">✏️ 주소 수정</div>
+
+          <!-- 도로명 검색창 재활성화 -->
+          <div style="background:white;border:1.5px solid #6366F1;border-radius:8px;padding:8px 10px;margin-bottom:5px;display:flex;align-items:center;gap:6px">
+            <span style="font-size:12px">🔍</span>
+            <div style="flex:1">
+              <div style="font-size:7px;color:#6366F1;font-weight:600;margin-bottom:1px">도로명 주소</div>
+              <div style="font-size:9px;color:#111827">서울 강남구 테헤란로 152</div>
+            </div>
+            <span style="font-size:8px;color:#9CA3AF;text-decoration:underline;cursor:pointer;white-space:nowrap">재검색</span>
+          </div>
+
+          <!-- 상세주소 수정 -->
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:8px 10px;margin-bottom:8px">
+            <div style="font-size:7px;color:#6B7280;font-weight:600;margin-bottom:4px">상세주소 수정</div>
+            <div style="background:#F9FAFB;border:1px solid #DDD6FE;border-radius:5px;padding:5px 8px;font-size:9px;color:#374151">헬리오시티 101동 <strong>1104</strong>호</div>
+          </div>
+
+          <div style="display:flex;gap:5px">
+            <div style="flex:1;background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:7px;border-radius:7px;font-size:9px;font-weight:700;text-align:center;cursor:pointer">다시 변환</div>
+            <div style="background:#F3F4F6;color:#6B7280;padding:7px 10px;border-radius:7px;font-size:9px;cursor:pointer">취소</div>
+          </div>
+        </div>
+
+        <div style="font-size:8px;color:#9CA3AF;text-align:center">아래 결과 카드는 흐리게 표시됨</div>
+        <div style="opacity:0.3;display:grid;gap:4px;margin-top:6px">
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:7px;padding:8px 10px;font-size:8px;color:#9CA3AF">Street Address 1 — 152 Teheran-ro...</div>
+          <div style="background:white;border:1px solid #E5E7EB;border-radius:7px;padding:8px 10px;font-size:8px;color:#9CA3AF">Street Address 2 — Helio City...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 초기화 결과 -->
+    <div style="margin-top:16px">
+      <div style="text-align:center;margin-bottom:8px">
+        <span style="background:#EF4444;color:white;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700">초기화</span>
+        <div style="font-size:10px;color:#6B7280;margin-top:4px">↺ 초기화 — 첫 화면으로 완전히 리셋</div>
+      </div>
+      <div class="mockup">
+        <div class="mockup-header">초기화 후 화면</div>
+        <div class="mockup-body" style="background:#F5F3FF;padding:14px">
+          <div style="font-size:12px;font-weight:800;color:#1E1B4B;margin-bottom:2px">🗺️ 영문주소 변환기</div>
+          <div style="font-size:8px;color:#6B7280;margin-bottom:12px">해외배송·직구 주소 입력이 쉬워져요</div>
+          <div style="background:white;border:2px solid #6366F1;border-radius:10px;padding:12px 14px;box-shadow:0 0 0 4px #EEF2FF;display:flex;align-items:center;gap:8px">
+            <span style="font-size:16px">🔍</span>
+            <div style="font-size:9px;color:#C4B5FD">도로명 또는 지번 주소 검색...</div>
+          </div>
+          <div style="margin-top:8px;padding:8px 10px;background:white;border:1px solid #E5E7EB;border-radius:8px;font-size:8px;color:#6B7280;text-align:center">
+            결과 영역 사라짐 — 첫 화면으로 돌아옴
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:16px;padding:12px 14px;background:white;border:1px solid #E5E7EB;border-radius:10px;font-size:10px;max-width:960px;margin-left:auto;margin-right:auto">
+  <div style="font-weight:700;color:#1E1B4B;margin-bottom:6px">📌 동선 요약</div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;color:#374151">
+    <div>✏️ <strong>수정</strong> — 결과 위에 수정 패널이 인라인으로 열림. 도로명 재검색 or 상세주소만 수정 가능. "다시 변환" 클릭 시 결과 업데이트.</div>
+    <div>↺ <strong>초기화</strong> — 모든 입력과 결과를 지우고 STEP 1 첫 화면으로 완전히 리셋.</div>
+  </div>
+</div>
+
+<div style="margin-top:10px;padding:10px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:11px;color:#166534;max-width:960px;margin-left:auto;margin-right:auto">
+  ✅ 이 동선으로 괜찮으면 확인해주세요. 확정되면 전체 스펙 문서 작성으로 넘어갈게요!
+</div>

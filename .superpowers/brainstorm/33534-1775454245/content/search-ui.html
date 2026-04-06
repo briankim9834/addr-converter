@@ -1,0 +1,147 @@
+<h2>검색 UI 흐름</h2>
+<p class="subtitle">페이지에 처음 들어왔을 때부터 주소 선택까지 3단계예요</p>
+
+<div style="display:flex;gap:16px;align-items:flex-start;justify-content:center;flex-wrap:wrap">
+
+  <!-- STEP 1: 초기 상태 -->
+  <div style="width:300px">
+    <div style="text-align:center;margin-bottom:8px">
+      <span style="background:#6366F1;color:white;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700">STEP 1</span>
+      <div style="font-size:10px;color:#6B7280;margin-top:4px">페이지 진입 — 초기 상태</div>
+    </div>
+    <div class="mockup">
+      <div class="mockup-header">초기 화면</div>
+      <div class="mockup-body" style="background:#F5F3FF;padding:0">
+        <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:9px 14px">
+          <div style="color:white;font-size:11px;font-weight:800">⚡ 유틸모음</div>
+        </div>
+        <div style="padding:16px">
+          <div style="font-size:12px;font-weight:800;color:#1E1B4B;margin-bottom:2px">🗺️ 영문주소 변환기</div>
+          <div style="font-size:8px;color:#6B7280;margin-bottom:16px">해외배송·직구 주소 입력이 쉬워져요</div>
+
+          <!-- 메인 검색창 -->
+          <div style="background:white;border:2px solid #6366F1;border-radius:10px;padding:12px 14px;box-shadow:0 0 0 4px #EEF2FF;display:flex;align-items:center;gap:8px">
+            <span style="font-size:16px">🔍</span>
+            <div style="flex:1">
+              <div style="font-size:8px;color:#6366F1;font-weight:600;margin-bottom:2px">도로명 또는 지번 주소 검색</div>
+              <div style="font-size:10px;color:#C4B5FD">예) 테헤란로 152, 강남구 역삼동...</div>
+            </div>
+          </div>
+
+          <div style="margin-top:10px;padding:8px 10px;background:white;border:1px solid #E5E7EB;border-radius:8px;font-size:8px;color:#6B7280;line-height:1.6">
+            💡 <strong>이렇게 사용하세요</strong><br>
+            1. 위 검색창에 주소를 입력하세요<br>
+            2. 상세주소(동/호수)를 추가 입력하세요<br>
+            3. 항목별로 복사해서 사용하세요
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2: 검색 중 (자동완성) -->
+  <div style="width:300px">
+    <div style="text-align:center;margin-bottom:8px">
+      <span style="background:#6366F1;color:white;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700">STEP 2</span>
+      <div style="font-size:10px;color:#6B7280;margin-top:4px">검색어 입력 — 자동완성 드롭다운</div>
+    </div>
+    <div class="mockup">
+      <div class="mockup-header">입력 중 화면</div>
+      <div class="mockup-body" style="background:#F5F3FF;padding:0">
+        <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:9px 14px">
+          <div style="color:white;font-size:11px;font-weight:800">⚡ 유틸모음</div>
+        </div>
+        <div style="padding:16px">
+          <div style="font-size:12px;font-weight:800;color:#1E1B4B;margin-bottom:2px">🗺️ 영문주소 변환기</div>
+          <div style="font-size:8px;color:#6B7280;margin-bottom:16px">해외배송·직구 주소 입력이 쉬워져요</div>
+
+          <!-- 입력 중인 검색창 -->
+          <div style="background:white;border:2px solid #6366F1;border-radius:10px 10px 0 0;padding:12px 14px;box-shadow:0 0 0 4px #EEF2FF;display:flex;align-items:center;gap:8px">
+            <span style="font-size:16px">🔍</span>
+            <div style="flex:1">
+              <div style="font-size:8px;color:#6366F1;font-weight:600;margin-bottom:2px">도로명 또는 지번 주소 검색</div>
+              <div style="font-size:11px;color:#111827;font-weight:500">테헤란로 152<span style="display:inline-block;width:1px;height:11px;background:#6366F1;margin-left:1px;vertical-align:middle;animation:none">|</span></div>
+            </div>
+            <span style="font-size:10px;color:#9CA3AF;cursor:pointer">✕</span>
+          </div>
+
+          <!-- 자동완성 드롭다운 (카카오 API) -->
+          <div style="background:white;border:2px solid #6366F1;border-top:none;border-radius:0 0 10px 10px;box-shadow:0 4px 12px rgba(99,102,241,0.15);overflow:hidden">
+            <div style="background:#EEF2FF;padding:5px 12px;font-size:8px;color:#6366F1;font-weight:600">검색 결과 4건</div>
+
+            <div style="padding:8px 12px;border-bottom:1px solid #F3F4F6;cursor:pointer;background:#F5F3FF">
+              <div style="font-size:10px;font-weight:600;color:#1E1B4B">테헤란로 152</div>
+              <div style="font-size:8px;color:#6B7280;margin-top:1px">서울 강남구 테헤란로 152 (역삼동)</div>
+            </div>
+            <div style="padding:8px 12px;border-bottom:1px solid #F3F4F6;cursor:pointer">
+              <div style="font-size:10px;font-weight:500;color:#374151">테헤란로 152길 3</div>
+              <div style="font-size:8px;color:#9CA3AF;margin-top:1px">서울 강남구 테헤란로152길 3 (역삼동)</div>
+            </div>
+            <div style="padding:8px 12px;border-bottom:1px solid #F3F4F6;cursor:pointer">
+              <div style="font-size:10px;font-weight:500;color:#374151">테헤란로 152길 10</div>
+              <div style="font-size:8px;color:#9CA3AF;margin-top:1px">서울 강남구 테헤란로152길 10 (역삼동)</div>
+            </div>
+            <div style="padding:8px 12px;cursor:pointer">
+              <div style="font-size:10px;font-weight:500;color:#374151">테헤란로 152길 12</div>
+              <div style="font-size:8px;color:#9CA3AF;margin-top:1px">서울 강남구 테헤란로152길 12 (역삼동)</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3: 주소 선택 후 -->
+  <div style="width:300px">
+    <div style="text-align:center;margin-bottom:8px">
+      <span style="background:#6366F1;color:white;padding:3px 10px;border-radius:20px;font-size:9px;font-weight:700">STEP 3</span>
+      <div style="font-size:10px;color:#6B7280;margin-top:4px">주소 선택 완료 — 상세주소 입력</div>
+    </div>
+    <div class="mockup">
+      <div class="mockup-header">선택 후 화면</div>
+      <div class="mockup-body" style="background:#F5F3FF;padding:0">
+        <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:9px 14px">
+          <div style="color:white;font-size:11px;font-weight:800">⚡ 유틸모음</div>
+        </div>
+        <div style="padding:16px">
+          <div style="font-size:12px;font-weight:800;color:#1E1B4B;margin-bottom:2px">🗺️ 영문주소 변환기</div>
+          <div style="font-size:8px;color:#6B7280;margin-bottom:16px">해외배송·직구 주소 입력이 쉬워져요</div>
+
+          <!-- 선택 완료된 검색창 -->
+          <div style="background:white;border:2px solid #10B981;border-radius:10px;padding:10px 12px;margin-bottom:6px;display:flex;align-items:center;gap:8px">
+            <span style="font-size:14px">✅</span>
+            <div style="flex:1">
+              <div style="font-size:8px;color:#10B981;font-weight:600;margin-bottom:1px">도로명 주소 선택됨</div>
+              <div style="font-size:10px;color:#111827;font-weight:500">서울 강남구 테헤란로 152</div>
+            </div>
+            <span style="font-size:9px;color:#9CA3AF;cursor:pointer;text-decoration:underline">변경</span>
+          </div>
+
+          <!-- 상세주소 입력 -->
+          <div style="background:white;border:1.5px solid #E5E7EB;border-radius:10px;padding:10px 12px;margin-bottom:12px">
+            <div style="font-size:8px;color:#6B7280;font-weight:600;margin-bottom:6px">
+              상세주소 입력
+              <span style="font-weight:400;color:#9CA3AF"> — 동/호수/건물명 (선택사항)</span>
+            </div>
+            <div style="display:flex;gap:6px;align-items:center">
+              <div style="flex:1;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:6px;padding:7px 10px;font-size:10px;color:#9CA3AF">예) 헬리오시티 101동 1103호</div>
+            </div>
+          </div>
+
+          <!-- 변환 버튼 -->
+          <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);border-radius:10px;padding:12px;text-align:center;cursor:pointer;box-shadow:0 4px 14px rgba(99,102,241,0.35)">
+            <div style="color:white;font-size:11px;font-weight:700">🗺️ 영문 주소로 변환하기</div>
+            <div style="color:rgba(255,255,255,0.7);font-size:8px;margin-top:2px">클릭하면 아래에 결과가 나타납니다</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:16px;max-width:940px;margin-left:auto;margin-right:auto;padding:12px 14px;background:#F0FDF4;border:1px solid #86EFAC;border-radius:8px;font-size:11px;color:#166534">
+  ✅ 이 검색 흐름으로 괜찮으면 확인해주세요. 변환 버튼을 누르면 아래에 결과 카드들이 나타나는 구조예요.
+</div>

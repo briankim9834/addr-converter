@@ -1,0 +1,119 @@
+<h2>디자인 방향 선택</h2>
+<p class="subtitle">전체 색상, 느낌, 톤앤매너를 결정해요. 클릭해서 선택해주세요.</p>
+
+<div class="cards">
+
+  <!-- Option A: Clean & Trust -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#F8FAFC;padding:16px;border-bottom:1px solid #E2E8F0">
+      <!-- 미니 사이트 미리보기 -->
+      <div style="background:white;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08)">
+        <div style="background:#2563EB;padding:8px 12px;display:flex;justify-content:space-between;align-items:center">
+          <span style="color:white;font-size:11px;font-weight:700">⚡ 주소변환기</span>
+          <span style="color:rgba(255,255,255,0.7);font-size:9px">홈 | 영문주소 | 도구모음</span>
+        </div>
+        <div style="padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#1E293B;margin-bottom:8px">한글 주소 → 영문 주소 변환기</div>
+          <div style="background:#F1F5F9;border-radius:6px;padding:7px 10px;font-size:9px;color:#64748B;margin-bottom:8px">🔍 도로명 주소를 검색하세요...</div>
+          <div style="display:grid;gap:4px">
+            <div style="background:white;border:1px solid #E2E8F0;border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px">
+              <div><span style="color:#64748B;font-size:8px;display:block">ADDRESS LINE 1</span>152 Teheran-ro</div>
+              <span style="background:#2563EB;color:white;padding:2px 6px;border-radius:3px;font-size:8px">복사</span>
+            </div>
+            <div style="background:#EFF6FF;border:1.5px solid #BFDBFE;border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px">
+              <div><span style="color:#64748B;font-size:8px;display:block">전체 복사</span>152 Teheran-ro, Seoul...</div>
+              <span style="background:#2563EB;color:white;padding:2px 8px;border-radius:3px;font-size:8px;font-weight:600">복사</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — 클린 & 신뢰감</h3>
+      <p>파란색 계열. 공공서비스 느낌. 깔끔하고 신뢰감 있음. 에드센스 광고와 충돌 적음.</p>
+      <div style="display:flex;gap:4px;margin-top:8px">
+        <div style="width:16px;height:16px;border-radius:50%;background:#2563EB"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#1E293B"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#F1F5F9"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#EFF6FF"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option B: Modern & Fresh -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#FAFAFA;padding:16px;border-bottom:1px solid #E5E7EB">
+      <div style="background:white;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08)">
+        <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);padding:8px 12px;display:flex;justify-content:space-between;align-items:center">
+          <span style="color:white;font-size:11px;font-weight:700">⚡ 주소변환기</span>
+          <span style="color:rgba(255,255,255,0.7);font-size:9px">홈 | 영문주소 | 도구모음</span>
+        </div>
+        <div style="padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#111827;margin-bottom:8px">한글 주소 → 영문 주소 변환기</div>
+          <div style="background:#F5F3FF;border:1px solid #DDD6FE;border-radius:6px;padding:7px 10px;font-size:9px;color:#7C3AED;margin-bottom:8px">🔍 도로명 주소를 검색하세요...</div>
+          <div style="display:grid;gap:4px">
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px">
+              <div><span style="color:#6B7280;font-size:8px;display:block">ADDRESS LINE 1</span>152 Teheran-ro</div>
+              <span style="background:linear-gradient(135deg,#6366F1,#8B5CF6);color:white;padding:2px 6px;border-radius:3px;font-size:8px">복사</span>
+            </div>
+            <div style="background:linear-gradient(135deg,#6366F1,#8B5CF6);border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px">
+              <div style="color:white"><span style="color:rgba(255,255,255,0.7);font-size:8px;display:block">전체 복사</span>152 Teheran-ro, Seoul...</div>
+              <span style="background:white;color:#6366F1;padding:2px 8px;border-radius:3px;font-size:8px;font-weight:600">복사</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — 모던 & 세련 ⭐ 추천</h3>
+      <p>인디고+퍼플 그라데이션. 요즘 느낌의 서비스. 젊고 감각적. 기억에 남는 개성 있는 색상.</p>
+      <div style="display:flex;gap:4px;margin-top:8px">
+        <div style="width:16px;height:16px;border-radius:50%;background:#6366F1"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#8B5CF6"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#111827"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#F5F3FF"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option C: Warm & Friendly -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#FFFBF5;padding:16px;border-bottom:1px solid #FED7AA">
+      <div style="background:white;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08)">
+        <div style="background:#EA580C;padding:8px 12px;display:flex;justify-content:space-between;align-items:center">
+          <span style="color:white;font-size:11px;font-weight:700">⚡ 주소변환기</span>
+          <span style="color:rgba(255,255,255,0.7);font-size:9px">홈 | 영문주소 | 도구모음</span>
+        </div>
+        <div style="padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#1C1917;margin-bottom:8px">한글 주소 → 영문 주소 변환기</div>
+          <div style="background:#FFF7ED;border:1px solid #FED7AA;border-radius:6px;padding:7px 10px;font-size:9px;color:#9A3412;margin-bottom:8px">🔍 도로명 주소를 검색하세요...</div>
+          <div style="display:grid;gap:4px">
+            <div style="background:white;border:1px solid #E7E5E4;border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px">
+              <div><span style="color:#78716C;font-size:8px;display:block">ADDRESS LINE 1</span>152 Teheran-ro</div>
+              <span style="background:#EA580C;color:white;padding:2px 6px;border-radius:3px;font-size:8px">복사</span>
+            </div>
+            <div style="background:#FFF7ED;border:2px solid #EA580C;border-radius:6px;padding:7px 10px;display:flex;justify-content:space-between;font-size:9px">
+              <div><span style="color:#9A3412;font-size:8px;display:block">전체 복사</span>152 Teheran-ro, Seoul...</div>
+              <span style="background:#EA580C;color:white;padding:2px 8px;border-radius:3px;font-size:8px;font-weight:600">복사</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — 웜 & 친근감</h3>
+      <p>오렌지 계열. 따뜻하고 접근하기 쉬운 느낌. 실용적인 툴 서비스에 잘 어울림.</p>
+      <div style="display:flex;gap:4px;margin-top:8px">
+        <div style="width:16px;height:16px;border-radius:50%;background:#EA580C"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#1C1917"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#FFF7ED"></div>
+        <div style="width:16px;height:16px;border-radius:50%;background:#FED7AA"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div style="margin-top:14px;padding:10px 12px;background:#F8FAFC;border:1px solid #E2E8F0;border-radius:8px;font-size:10px;color:#64748B">
+  💡 어떤 걸 골라도 나중에 세부 색상은 조정 가능해요. 전체적인 톤앤매너를 고르는 단계예요.
+</div>

@@ -1,0 +1,120 @@
+<h2>영문주소 변환기 — 결과 표시 방식</h2>
+<p class="subtitle">주소 변환 결과를 어떻게 보여줄까요? 클릭해서 선택해주세요</p>
+
+<div class="options">
+
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>카드형 필드 나열</h3>
+      <p>각 항목(Address Line 1/2, City 등)이 개별 카드로 표시. 각각 복사 버튼 포함.</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">변환 결과 영역</div>
+        <div class="mockup-body">
+          <div style="font-size:11px;font-weight:600;color:#6B7280;margin-bottom:8px">🔍 검색창 (카카오 주소 자동완성)</div>
+          <div style="background:#F3F4F6;border-radius:6px;padding:8px;font-size:10px;color:#9CA3AF;margin-bottom:12px">서울특별시 강남구 테헤란로 ✓</div>
+
+          <div style="font-size:11px;font-weight:600;margin-bottom:8px;color:#374151">변환 결과</div>
+          <div style="display:grid;gap:6px">
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:10px;display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-size:9px;color:#6B7280;font-weight:600;text-transform:uppercase;letter-spacing:0.5px">Address Line 1</div>
+                <div style="font-size:11px;font-weight:500;margin-top:2px">Teheran-ro, Gangnam-gu</div>
+              </div>
+              <div style="background:#4F46E5;color:white;padding:4px 8px;border-radius:4px;font-size:9px;cursor:pointer">복사</div>
+            </div>
+            <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:10px;display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-size:9px;color:#6B7280;font-weight:600;text-transform:uppercase;letter-spacing:0.5px">Address Line 2</div>
+                <div style="font-size:11px;font-weight:500;margin-top:2px">(생략 가능)</div>
+              </div>
+              <div style="background:#4F46E5;color:white;padding:4px 8px;border-radius:4px;font-size:9px;cursor:pointer">복사</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">
+              <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:8px">
+                <div style="font-size:9px;color:#6B7280;font-weight:600">City</div>
+                <div style="font-size:10px;font-weight:500;margin-top:2px">Seoul</div>
+                <div style="background:#4F46E5;color:white;padding:2px 6px;border-radius:3px;font-size:8px;margin-top:4px;text-align:center">복사</div>
+              </div>
+              <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:8px">
+                <div style="font-size:9px;color:#6B7280;font-weight:600">State/Province</div>
+                <div style="font-size:10px;font-weight:500;margin-top:2px">Seoul</div>
+                <div style="background:#4F46E5;color:white;padding:2px 6px;border-radius:3px;font-size:8px;margin-top:4px;text-align:center">복사</div>
+              </div>
+              <div style="background:white;border:1px solid #E5E7EB;border-radius:8px;padding:8px">
+                <div style="font-size:9px;color:#6B7280;font-weight:600">ZIP Code</div>
+                <div style="font-size:10px;font-weight:500;margin-top:2px">06142</div>
+                <div style="background:#4F46E5;color:white;padding:2px 6px;border-radius:3px;font-size:8px;margin-top:4px;text-align:center">복사</div>
+              </div>
+            </div>
+            <div style="background:#EEF2FF;border:2px solid #4F46E5;border-radius:8px;padding:10px;display:flex;justify-content:space-between;align-items:center">
+              <div>
+                <div style="font-size:9px;color:#4F46E5;font-weight:600">전체 복사</div>
+                <div style="font-size:10px;margin-top:2px">Teheran-ro, Gangnam-gu, Seoul 06142, South Korea</div>
+              </div>
+              <div style="background:#4F46E5;color:white;padding:4px 8px;border-radius:4px;font-size:9px;cursor:pointer">전체 복사</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>테이블형 레이아웃 ⭐ 추천</h3>
+      <p>필드명 / 값 / 복사버튼이 한 줄로. 한눈에 비교하기 쉽고 깔끔함.</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-header">변환 결과 영역</div>
+        <div class="mockup-body">
+          <div style="font-size:11px;font-weight:600;color:#6B7280;margin-bottom:8px">🔍 검색창 (카카오 주소 자동완성)</div>
+          <div style="background:#F3F4F6;border-radius:6px;padding:8px;font-size:10px;color:#9CA3AF;margin-bottom:12px">서울특별시 강남구 테헤란로 ✓</div>
+
+          <div style="font-size:11px;font-weight:600;margin-bottom:8px;color:#374151">변환 결과</div>
+          <div style="border:1px solid #E5E7EB;border-radius:8px;overflow:hidden">
+            <div style="display:grid;grid-template-columns:110px 1fr 50px;font-size:10px">
+              <div style="background:#F9FAFB;padding:8px;font-size:9px;font-weight:600;color:#6B7280;border-bottom:1px solid #F3F4F6">Address Line 1</div>
+              <div style="padding:8px;border-bottom:1px solid #F3F4F6;font-size:10px">Teheran-ro, Gangnam-gu</div>
+              <div style="padding:6px;border-bottom:1px solid #F3F4F6;text-align:center"><span style="background:#4F46E5;color:white;padding:2px 6px;border-radius:3px;font-size:8px">복사</span></div>
+
+              <div style="background:#F9FAFB;padding:8px;font-size:9px;font-weight:600;color:#6B7280;border-bottom:1px solid #F3F4F6">Address Line 2</div>
+              <div style="padding:8px;border-bottom:1px solid #F3F4F6;font-size:10px;color:#9CA3AF">—</div>
+              <div style="padding:6px;border-bottom:1px solid #F3F4F6;text-align:center"><span style="background:#E5E7EB;color:#9CA3AF;padding:2px 6px;border-radius:3px;font-size:8px">복사</span></div>
+
+              <div style="background:#F9FAFB;padding:8px;font-size:9px;font-weight:600;color:#6B7280;border-bottom:1px solid #F3F4F6">City</div>
+              <div style="padding:8px;border-bottom:1px solid #F3F4F6;font-size:10px">Seoul</div>
+              <div style="padding:6px;border-bottom:1px solid #F3F4F6;text-align:center"><span style="background:#4F46E5;color:white;padding:2px 6px;border-radius:3px;font-size:8px">복사</span></div>
+
+              <div style="background:#F9FAFB;padding:8px;font-size:9px;font-weight:600;color:#6B7280;border-bottom:1px solid #F3F4F6">State/Province</div>
+              <div style="padding:8px;border-bottom:1px solid #F3F4F6;font-size:10px">Seoul</div>
+              <div style="padding:6px;border-bottom:1px solid #F3F4F6;text-align:center"><span style="background:#4F46E5;color:white;padding:2px 6px;border-radius:3px;font-size:8px">복사</span></div>
+
+              <div style="background:#F9FAFB;padding:8px;font-size:9px;font-weight:600;color:#6B7280;border-bottom:1px solid #F3F4F6">ZIP Code</div>
+              <div style="padding:8px;border-bottom:1px solid #F3F4F6;font-size:10px">06142</div>
+              <div style="padding:6px;border-bottom:1px solid #F3F4F6;text-align:center"><span style="background:#4F46E5;color:white;padding:2px 6px;border-radius:3px;font-size:8px">복사</span></div>
+
+              <div style="background:#F9FAFB;padding:8px;font-size:9px;font-weight:600;color:#6B7280">Country</div>
+              <div style="padding:8px;font-size:10px">South Korea</div>
+              <div style="padding:6px;text-align:center"><span style="background:#4F46E5;color:white;padding:2px 6px;border-radius:3px;font-size:8px">복사</span></div>
+            </div>
+          </div>
+          <div style="background:#EEF2FF;border:2px solid #4F46E5;border-radius:8px;padding:10px;display:flex;justify-content:space-between;align-items:center;margin-top:8px">
+            <div style="font-size:10px">Teheran-ro, Gangnam-gu, Seoul 06142, South Korea</div>
+            <div style="background:#4F46E5;color:white;padding:4px 10px;border-radius:4px;font-size:9px;white-space:nowrap;margin-left:8px">전체 복사</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="section" style="margin-top:16px;padding:12px;background:#FFFBEB;border:1px solid #FDE68A;border-radius:8px;font-size:11px">
+  <strong>📌 공통 포함 사항 (두 옵션 모두)</strong>
+  <ul style="margin:6px 0 0 16px;color:#92400E">
+    <li>상단: 카카오 주소 자동완성 검색창</li>
+    <li>하단: 사이트별 입력 가이드 (아마존, 알리익스프레스, 몰테일 탭)</li>
+    <li>전체 복사 버튼 (강조 표시)</li>
+  </ul>
+</div>
