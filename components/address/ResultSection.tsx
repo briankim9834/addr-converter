@@ -1,7 +1,7 @@
 // components/address/ResultSection.tsx
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ParsedAddress, SelectedAddress } from '@/types/address'
 import { formatFullAddress } from '@/lib/address'
 import ResultCard from './ResultCard'
@@ -26,6 +26,11 @@ export default function ResultSection({
   const [editDetail, setEditDetail] = useState(address.addressLine2)
   const [localAddress, setLocalAddress] = useState(address)
   const [copiedAll, setCopiedAll] = useState(false)
+
+  useEffect(() => {
+    setLocalAddress(address)
+    setEditDetail(address.addressLine2)
+  }, [address])
 
   function handleAddressLine2Change(value: string) {
     const updated = {
@@ -103,7 +108,7 @@ export default function ResultSection({
           subLabel="/ Address Line 1"
           value={localAddress.addressLine1}
         />
-        {localAddress.addressLine2 !== undefined && (
+        {localAddress.addressLine2 !== '' && (
           <ResultCard
             label="Street Address 2"
             subLabel="/ Address Line 2"

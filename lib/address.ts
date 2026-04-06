@@ -2,17 +2,18 @@
 import { JusoItem, ParsedAddress } from '@/types/address'
 
 /**
- * JUSO API의 engAddr 문자열을 파싱해 구조화된 영문 주소를 반환한다.
- *
- * engAddr 포맷 (서울/광역시): "152, Teheran-ro, Gangnam-gu, Seoul"
- * engAddr 포맷 (도 단위):     "1, Hyowon-ro, Paldal-gu, Suwon-si, Gyeonggi-do"
+ * JUSO API의 개별 영문 필드를 사용해 구조화된 영문 주소를 반환한다.
+ * (engAddr 단일 문자열 파싱 방식 사용 안 함 — 스펙 섹션 4-2 참조)
  */
 export function parseEngAddr(juso: JusoItem): ParsedAddress {
-  const parts = juso.engAddr.split(', ').map((p) => p.trim())
+  const buildingNum =
+    juso.buldSlno && juso.buldSlno !== '0'
+      ? `${juso.buldMnnm}-${juso.buldSlno}`
+      : juso.buldMnnm
 
-  const addressLine1 = `${parts[0]} ${parts[1]}, ${parts[2]}`
-  const city = parts.length >= 5 ? parts[parts.length - 2] : parts[parts.length - 1]
-  const state = parts[parts.length - 1]
+  const addressLine1 = `${buildingNum} ${juso.rn}, ${juso.sggNm}`
+  const city = juso.siNm
+  const state = juso.siNm
 
   const base: ParsedAddress = {
     addressLine1,
@@ -29,11 +30,12 @@ export function parseEngAddr(juso: JusoItem): ParsedAddress {
 
 /**
  * ParsedAddress를 해외 배송용 전체 주소 한 줄로 포맷한다.
+ * addressLine2 내부의 쉼표는 구분자와 혼동되지 않도록 제거한다.
  */
 export function formatFullAddress(address: ParsedAddress): string {
   const parts = [
     address.addressLine1,
-    address.addressLine2 ? address.addressLine2.replace(/,\s*/g, ' ') : null,
+    address.addressLine2 ? address.addressLine2.replace(/,/g, '') : null,
     `${address.city} ${address.zipCode}`,
     address.country,
   ].filter(Boolean) as string[]

@@ -5,16 +5,33 @@ const seoulJuso: JusoItem = {
   roadAddr: '서울특별시 강남구 테헤란로 152',
   engAddr: '152, Teheran-ro, Gangnam-gu, Seoul',
   zipNo: '06142',
-  siNm: '서울특별시',
-  sggNm: '강남구',
+  siNm: 'Seoul',
+  sggNm: 'Gangnam-gu',
+  rn: 'Teheran-ro',
+  buldMnnm: '152',
+  buldSlno: '0',
 }
 
 const provincialJuso: JusoItem = {
   roadAddr: '경기도 수원시 팔달구 효원로 1',
   engAddr: '1, Hyowon-ro, Paldal-gu, Suwon-si, Gyeonggi-do',
   zipNo: '16359',
-  siNm: '경기도',
-  sggNm: '수원시 팔달구',
+  siNm: 'Gyeonggi-do',
+  sggNm: 'Paldal-gu',
+  rn: 'Hyowon-ro',
+  buldMnnm: '1',
+  buldSlno: '0',
+}
+
+const withSubNumJuso: JusoItem = {
+  roadAddr: '서울특별시 강남구 테헤란로 152',
+  engAddr: '152-3, Teheran-ro, Gangnam-gu, Seoul',
+  zipNo: '06142',
+  siNm: 'Seoul',
+  sggNm: 'Gangnam-gu',
+  rn: 'Teheran-ro',
+  buldMnnm: '152',
+  buldSlno: '3',
 }
 
 describe('parseEngAddr', () => {
@@ -30,7 +47,7 @@ describe('parseEngAddr', () => {
   it('도 단위 주소를 파싱한다 (5 parts)', () => {
     const result = parseEngAddr(provincialJuso)
     expect(result.addressLine1).toBe('1 Hyowon-ro, Paldal-gu')
-    expect(result.city).toBe('Suwon-si')
+    expect(result.city).toBe('Gyeonggi-do')
     expect(result.state).toBe('Gyeonggi-do')
     expect(result.zipCode).toBe('16359')
   })
@@ -38,6 +55,11 @@ describe('parseEngAddr', () => {
   it('addressLine2는 빈 문자열로 초기화된다', () => {
     const result = parseEngAddr(seoulJuso)
     expect(result.addressLine2).toBe('')
+  })
+
+  it('건물부번이 있으면 하이픈으로 연결한다', () => {
+    const result = parseEngAddr(withSubNumJuso)
+    expect(result.addressLine1).toBe('152-3 Teheran-ro, Gangnam-gu')
   })
 })
 

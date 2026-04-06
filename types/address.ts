@@ -12,11 +12,14 @@ export interface KakaoAddressData {
 
 /** JUSO API 응답의 개별 주소 항목 */
 export interface JusoItem {
-  roadAddr: string         // 도로명주소 (한글)
-  engAddr: string          // 영문주소 전체: "152, Teheran-ro, Gangnam-gu, Seoul"
-  zipNo: string            // 우편번호
-  siNm: string             // 시도명 (한글): "서울특별시"
-  sggNm: string            // 시군구명 (한글): "강남구"
+  roadAddr: string     // 한글 도로명주소
+  engAddr: string      // 영문 도로명주소 (전체) — kept for reference
+  zipNo: string        // 우편번호
+  siNm: string         // 시도명 (영문) e.g., "Seoul"
+  sggNm: string        // 시군구명 (영문) e.g., "Gangnam-gu"
+  rn: string           // 도로명 (영문) e.g., "Teheran-ro"
+  buldMnnm: string     // 건물본번 e.g., "152"
+  buldSlno: string     // 건물부번 e.g., "0"
 }
 
 /** JUSO API 전체 응답 구조 */

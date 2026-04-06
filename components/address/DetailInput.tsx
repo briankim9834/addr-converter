@@ -35,7 +35,10 @@ export default function DetailInput({
         <input
           type="text"
           value={korean}
-          onChange={(e) => setKorean(e.target.value)}
+          onChange={(e) => {
+            setKorean(e.target.value)
+            onChange(e.target.value)
+          }}
           onKeyDown={(e) => e.key === 'Enter' && handleTranslate()}
           placeholder="예) 헬리오시티 101동 1103호"
           className="flex-1 bg-violet-50 border border-violet-200 rounded-lg px-3 py-2 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:border-indigo-400"
