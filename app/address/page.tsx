@@ -85,11 +85,6 @@ export default function AddressPage() {
     await handleConvert(detail)
   }
 
-  // Dummy handler for DetailInput's onTranslate — translation happens in handleConvert
-  async function handleDetailTranslate(korean: string) {
-    setDetailKorean(korean)
-  }
-
   return (
     <div className="max-w-lg mx-auto px-4 py-8">
       <div className="mb-6">
@@ -111,8 +106,6 @@ export default function AddressPage() {
             <>
               <DetailInput
                 onChange={setDetailKorean}
-                onTranslate={handleDetailTranslate}
-                isTranslating={false}
               />
               <button
                 onClick={() => handleConvert(detailKorean)}
