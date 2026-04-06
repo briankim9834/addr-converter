@@ -4,14 +4,12 @@
 import { useState } from 'react'
 
 interface DetailInputProps {
-  value: string
   onChange: (value: string) => void
   onTranslate: (korean: string) => Promise<void>
   isTranslating: boolean
 }
 
 export default function DetailInput({
-  value: _value,
   onChange,
   onTranslate,
   isTranslating,

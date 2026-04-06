@@ -110,7 +110,6 @@ export default function AddressPage() {
           {step === 'detail' && selected && (
             <>
               <DetailInput
-                value={detailKorean}
                 onChange={setDetailKorean}
                 onTranslate={handleDetailTranslate}
                 isTranslating={false}
