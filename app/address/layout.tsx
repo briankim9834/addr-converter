@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     '영문주소 만들기',
   ],
   alternates: {
-    canonical: 'https://addr-converter.vercel.app/address',
+    canonical: 'https://doguham.kr/address',
   },
   openGraph: {
     title: '영문주소 변환기 — 한글 주소를 영문으로 즉시 변환',
     description: '한글 주소를 항목별 영문 주소로 즉시 변환. 해외배송·직구 주소 입력이 쉬워져요.',
-    url: 'https://addr-converter.vercel.app/address',
+    url: 'https://doguham.kr/address',
     type: 'website',
   },
   twitter: {
@@ -37,7 +37,7 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   name: '영문주소 변환기',
-  url: 'https://addr-converter.vercel.app/address',
+  url: 'https://doguham.kr/address',
   description:
     '한글 주소를 항목별 영문 주소로 즉시 변환. 해외배송·직구 주소 입력이 쉬워져요.',
   applicationCategory: 'UtilitiesApplication',

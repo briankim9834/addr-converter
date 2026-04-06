@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://addr-converter.vercel.app/sitemap.xml',
+    sitemap: 'https://doguham.kr/sitemap.xml',
   }
 }

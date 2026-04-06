@@ -8,7 +8,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://addr-converter.vercel.app'),
+  metadataBase: new URL('https://doguham.kr'),
   title: {
     default: '유틸모음 — 직장인을 위한 실용 도구',
     template: '%s | 유틸모음',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: '유틸모음',
     locale: 'ko_KR',
     type: 'website',
-    url: 'https://addr-converter.vercel.app',
+    url: 'https://doguham.kr',
   },
   twitter: {
     card: 'summary_large_image',

@@ -3,13 +3,13 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://addr-converter.vercel.app',
+      url: 'https://doguham.kr',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: 'https://addr-converter.vercel.app/address',
+      url: 'https://doguham.kr/address',
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,
