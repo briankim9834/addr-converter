@@ -11,8 +11,8 @@ export function parseEngAddr(juso: JusoItem): ParsedAddress {
       ? `${juso.buldMnnm}-${juso.buldSlno}`
       : juso.buldMnnm
 
-  const addressLine1 = `${buildingNum} ${juso.rn}, ${juso.sggNm}`
-  const city = juso.siNm
+  const addressLine1 = `${buildingNum} ${juso.rn}`
+  const city = juso.sggNm
   const state = juso.siNm
 
   const base: ParsedAddress = {
@@ -34,8 +34,8 @@ export function parseEngAddr(juso: JusoItem): ParsedAddress {
  */
 export function formatFullAddress(address: ParsedAddress): string {
   const parts = [
-    address.addressLine1,
     address.addressLine2 ? address.addressLine2.replace(/,/g, '') : null,
+    address.addressLine1,
     `${address.city} ${address.zipCode}`,
     address.country,
   ].filter(Boolean) as string[]
