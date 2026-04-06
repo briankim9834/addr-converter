@@ -56,14 +56,14 @@ export default function ResultSection({
     <div>
       {/* 현재 주소 요약 + 수정/초기화 */}
       {!isEditing && (
-        <div className="bg-white border border-gray-200 rounded-xl px-4 py-3 mb-4 flex items-start gap-3">
+        <div className="bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 mb-4 flex items-start gap-3">
           <div className="flex-1 min-w-0">
-            <p className="text-xs text-gray-400 mb-1">현재 변환 중인 주소</p>
-            <p className="text-sm font-semibold text-gray-900 truncate">
+            <p className="text-xs text-slate-500 mb-1">현재 변환 중인 주소</p>
+            <p className="text-sm font-semibold text-white truncate">
               {selected.korean}
             </p>
             {localAddress.addressLine2 && (
-              <p className="text-xs text-gray-500 mt-0.5">
+              <p className="text-xs text-slate-400 mt-0.5">
                 {localAddress.addressLine2}
               </p>
             )}
@@ -71,13 +71,13 @@ export default function ResultSection({
           <div className="flex flex-col gap-1.5 flex-shrink-0">
             <button
               onClick={() => setIsEditing(true)}
-              className="bg-indigo-50 text-indigo-600 text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-indigo-100 transition-colors"
+              className="bg-emerald-900/40 text-emerald-400 text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-emerald-900/60 transition-colors"
             >
               ✏️ 수정
             </button>
             <button
               onClick={onReset}
-              className="bg-red-50 text-red-500 text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-red-100 transition-colors"
+              className="bg-red-900/30 text-red-400 text-xs font-semibold px-3 py-1.5 rounded-md hover:bg-red-900/50 transition-colors"
             >
               ↺ 초기화
             </button>
@@ -98,7 +98,7 @@ export default function ResultSection({
       )}
 
       {/* 결과 카드들 */}
-      <p className="text-xs font-bold text-indigo-500 uppercase tracking-widest mb-3">
+      <p className="text-xs font-bold text-emerald-400 uppercase tracking-widest mb-3">
         변환 결과 — 항목별 복사
       </p>
 
@@ -134,17 +134,17 @@ export default function ResultSection({
         {/* 전체 복사 */}
         <button
           onClick={handleCopyAll}
-          className="bg-gradient-to-r from-indigo-600 to-purple-700 rounded-xl px-4 py-4 flex items-center justify-between mt-1 hover:opacity-95 transition-opacity"
+          className="bg-emerald-500 rounded-xl px-4 py-4 flex items-center justify-between mt-1 hover:bg-emerald-400 transition-colors"
         >
           <div className="text-left">
-            <p className="text-xs text-white/70 font-semibold mb-1">
+            <p className="text-xs text-slate-900/70 font-semibold mb-1">
               전체 주소 한 번에 복사
             </p>
-            <p className="text-xs text-white leading-relaxed">
+            <p className="text-xs text-slate-900 leading-relaxed">
               {localAddress.fullAddress}
             </p>
           </div>
-          <span className="bg-white text-indigo-600 text-xs font-bold px-3 py-2 rounded-lg ml-4 whitespace-nowrap flex-shrink-0">
+          <span className="bg-slate-900 text-emerald-400 text-xs font-bold px-3 py-2 rounded-lg ml-4 whitespace-nowrap flex-shrink-0">
             {copiedAll ? '✓ 복사됨' : '전체 복사'}
           </span>
         </button>
