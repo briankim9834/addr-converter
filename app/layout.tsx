@@ -8,8 +8,18 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: '유틸모음 — 직장인을 위한 실용 도구',
-  description: '영문주소 변환, 단위변환 등 업무와 일상에서 바로 쓸 수 있는 유틸 도구 모음',
+  title: {
+    default: '유틸모음 — 직장인을 위한 실용 도구',
+    template: '%s | 유틸모음',
+  },
+  description:
+    '영문주소 변환 등 업무와 일상에서 바로 쓸 수 있는 유틸 도구 모음. 해외배송·직구 영문주소 변환기.',
+  keywords: ['유틸모음', '영문주소변환기', '주소영문변환', '해외배송주소', '직구영문주소'],
+  openGraph: {
+    siteName: '유틸모음',
+    locale: 'ko_KR',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({
