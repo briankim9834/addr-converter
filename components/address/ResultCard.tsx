@@ -43,7 +43,7 @@ export default function ResultCard({
         <button
           onClick={handleCopy}
           disabled={!value}
-          className="bg-blue-600 text-white text-xs font-medium px-3 py-1.5 rounded-md disabled:opacity-30 hover:bg-blue-700 transition-colors whitespace-nowrap flex-shrink-0"
+          className="bg-blue-500 text-white text-xs font-bold px-3 py-1.5 rounded-md disabled:opacity-30 hover:bg-blue-600 transition-colors whitespace-nowrap flex-shrink-0 tracking-wide"
         >
           {copied ? '✓ 복사됨' : '📋 복사'}
         </button>

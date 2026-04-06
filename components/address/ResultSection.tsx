@@ -114,13 +114,13 @@ export default function ResultSection({
 
         <button
           onClick={handleCopyAll}
-          className="bg-blue-600 rounded-xl px-4 py-4 flex items-center justify-between mt-1 hover:bg-blue-700 transition-colors"
+          className="bg-blue-50 border-2 border-blue-500 rounded-xl px-4 py-4 flex items-center justify-between mt-1 hover:bg-blue-100 transition-colors"
         >
           <div className="text-left">
-            <p className="text-xs text-blue-100 font-semibold mb-1">전체 주소 한 번에 복사</p>
-            <p className="text-xs text-white leading-relaxed">{localAddress.fullAddress}</p>
+            <p className="text-xs text-blue-500 font-bold mb-1">전체 주소 한 번에 복사</p>
+            <p className="text-xs text-slate-700 font-medium leading-relaxed">{localAddress.fullAddress}</p>
           </div>
-          <span className="bg-white text-blue-600 text-xs font-bold px-3 py-2 rounded-lg ml-4 whitespace-nowrap flex-shrink-0">
+          <span className="bg-blue-600 text-white text-xs font-bold px-3 py-2 rounded-lg ml-4 whitespace-nowrap flex-shrink-0">
             {copiedAll ? '✓ 복사됨' : '전체 복사'}
           </span>
         </button>
