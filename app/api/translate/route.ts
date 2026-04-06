@@ -28,10 +28,10 @@ export async function POST(req: NextRequest) {
       method: 'POST',
       headers: {
         'Authorization': `DeepL-Auth-Key ${apiKey}`,
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/json',
       },
-      body: new URLSearchParams({
-        text,
+      body: JSON.stringify({
+        text: [text],
         source_lang: 'KO',
         target_lang: 'EN-US',
       }),
