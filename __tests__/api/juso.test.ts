@@ -3,8 +3,6 @@
 import { GET } from '@/app/api/juso/route'
 import { NextRequest } from 'next/server'
 
-global.fetch = jest.fn()
-
 const mockJusoResponse = {
   results: {
     common: { errorCode: '0', errorMessage: '정상', totalCount: '1' },
@@ -22,6 +20,7 @@ const mockJusoResponse = {
 
 describe('GET /api/juso', () => {
   beforeEach(() => {
+    global.fetch = jest.fn()
     jest.clearAllMocks()
     process.env.JUSO_API_KEY = 'test-key'
   })

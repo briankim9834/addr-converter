@@ -1,9 +1,16 @@
 // app/api/juso/route.ts
 import { NextRequest, NextResponse } from 'next/server'
+import { JusoApiResponse } from '@/types/address'
 
 const JUSO_API_URL = 'https://business.juso.go.kr/addrlink/addrEngApi.do'
 
 export async function GET(req: NextRequest) {
+  const apiKey = process.env.JUSO_API_KEY
+  if (!apiKey) {
+    console.error('JUSO_API_KEY is not configured')
+    return NextResponse.json({ error: 'Server configuration error' }, { status: 500 })
+  }
+
   const keyword = req.nextUrl.searchParams.get('keyword')
 
   if (!keyword) {
@@ -11,7 +18,7 @@ export async function GET(req: NextRequest) {
   }
 
   const params = new URLSearchParams({
-    confmKey: process.env.JUSO_API_KEY ?? '',
+    confmKey: apiKey,
     currentPage: '1',
     countPerPage: '5',
     keyword,
@@ -29,7 +36,12 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ error: 'JUSO API 오류' }, { status: 500 })
   }
 
-  const data = await response.json()
+  let data: JusoApiResponse
+  try {
+    data = await response.json() as JusoApiResponse
+  } catch {
+    return NextResponse.json({ error: 'JUSO API 응답 파싱 실패' }, { status: 500 })
+  }
 
   if (data.results.common.errorCode !== '0') {
     return NextResponse.json(
