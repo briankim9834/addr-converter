@@ -11,7 +11,7 @@ interface DetailInputProps {
 }
 
 export default function DetailInput({
-  value,
+  value: _value,
   onChange,
   onTranslate,
   isTranslating,
