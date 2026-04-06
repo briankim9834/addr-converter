@@ -44,19 +44,19 @@ export default function AddressSearch({
 
   if (selected) {
     return (
-      <div className="bg-slate-800 border-2 border-emerald-400 rounded-xl px-4 py-3 flex items-center gap-3">
+      <div className="bg-white border-2 border-emerald-400 rounded-xl px-4 py-3 flex items-center gap-3">
         <span className="text-lg">✅</span>
         <div className="flex-1 min-w-0">
-          <p className="text-xs text-emerald-400 font-semibold mb-0.5">
+          <p className="text-xs text-emerald-600 font-semibold mb-0.5">
             도로명 주소 선택됨
           </p>
-          <p className="text-sm font-medium text-white truncate">
+          <p className="text-sm font-medium text-gray-900 truncate">
             {selected.korean}
           </p>
         </div>
         <button
           onClick={onReset}
-          className="text-xs text-slate-400 underline hover:text-slate-200 whitespace-nowrap flex-shrink-0"
+          className="text-xs text-gray-400 underline hover:text-gray-600 whitespace-nowrap flex-shrink-0"
         >
           변경
         </button>
@@ -67,14 +67,14 @@ export default function AddressSearch({
   return (
     <button
       onClick={openKakaoPostcode}
-      className="w-full bg-slate-800 border-2 border-emerald-500 rounded-xl px-4 py-3 flex items-center gap-3 shadow-[0_0_0_4px_rgba(52,211,153,0.1)] hover:border-emerald-400 transition-colors text-left"
+      className="w-full bg-white border-2 border-indigo-500 rounded-xl px-4 py-3 flex items-center gap-3 shadow-[0_0_0_4px_#EEF2FF] hover:border-indigo-600 transition-colors text-left"
     >
       <span className="text-xl">🔍</span>
       <div>
-        <p className="text-xs text-emerald-400 font-semibold mb-0.5">
+        <p className="text-xs text-indigo-500 font-semibold mb-0.5">
           ① 도로명 주소 검색
         </p>
-        <p className="text-sm text-slate-400">
+        <p className="text-sm text-violet-300">
           예) 테헤란로 152, 강남구 역삼동...
         </p>
       </div>

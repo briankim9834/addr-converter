@@ -88,10 +88,10 @@ export default function AddressPage() {
   return (
     <div className="max-w-lg mx-auto px-4 py-8">
       <div className="mb-6">
-        <h1 className="text-xl font-extrabold text-white mb-1">
+        <h1 className="text-xl font-extrabold text-indigo-950 mb-1">
           🗺️ 영문주소 변환기
         </h1>
-        <p className="text-sm text-slate-400">해외배송·직구 주소 입력이 쉬워져요</p>
+        <p className="text-sm text-gray-500">해외배송·직구 주소 입력이 쉬워져요</p>
       </div>
 
       {step !== 'result' && (
@@ -110,7 +110,7 @@ export default function AddressPage() {
               <button
                 onClick={() => handleConvert(detailKorean)}
                 disabled={isConverting}
-                className="w-full bg-emerald-500 text-slate-900 font-bold py-4 rounded-xl shadow-lg shadow-emerald-900/30 disabled:opacity-50 hover:bg-emerald-400 transition-colors"
+                className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white font-bold py-4 rounded-xl shadow-lg shadow-indigo-200 disabled:opacity-50 hover:opacity-95 transition-opacity"
               >
                 {isConverting ? '변환 중...' : '🗺️ 영문 주소로 변환하기'}
               </button>
@@ -118,8 +118,8 @@ export default function AddressPage() {
           )}
 
           {step === 'search' && (
-            <div className="bg-slate-800/60 border border-slate-700 rounded-xl p-4 text-xs text-slate-400 leading-6">
-              💡 <strong className="text-slate-300">이렇게 사용하세요</strong>
+            <div className="bg-white/60 border border-violet-100 rounded-xl p-4 text-xs text-gray-500 leading-6">
+              💡 <strong className="text-gray-700">이렇게 사용하세요</strong>
               <br />
               1. 위 검색창을 눌러 도로명 주소를 검색하세요
               <br />
