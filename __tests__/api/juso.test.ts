@@ -61,4 +61,32 @@ describe('GET /api/juso', () => {
     const res = await GET(req)
     expect(res.status).toBe(500)
   })
+
+  it('JUSO API가 errorCode !== "0"을 반환하면 500을 반환한다', async () => {
+    ;(fetch as jest.Mock).mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({
+        results: {
+          common: { errorCode: 'E0001', errorMessage: '검색어를 입력해 주세요', totalCount: '0' },
+          juso: null,
+        },
+      }),
+    })
+
+    const req = new NextRequest('http://localhost/api/juso?keyword=테스트주소')
+    const res = await GET(req)
+    const data = await res.json()
+
+    expect(res.status).toBe(500)
+    expect(data.error).toBe('검색어를 입력해 주세요')
+  })
+
+  it('네트워크 오류가 발생하면 500을 반환한다', async () => {
+    ;(fetch as jest.Mock).mockRejectedValueOnce(new Error('network error'))
+
+    const req = new NextRequest('http://localhost/api/juso?keyword=테스트주소')
+    const res = await GET(req)
+
+    expect(res.status).toBe(500)
+  })
 })
