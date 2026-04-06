@@ -33,7 +33,7 @@ export default function AddressPage() {
   async function translateDetail(korean: string): Promise<string> {
     if (!korean.trim()) return ''
     try {
-      const res = await fetch('/api/papago', {
+      const res = await fetch('/api/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: korean }),
