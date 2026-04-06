@@ -37,8 +37,8 @@ const withSubNumJuso: JusoItem = {
 describe('parseEngAddr', () => {
   it('서울 주소를 파싱한다 (4 parts)', () => {
     const result = parseEngAddr(seoulJuso)
-    expect(result.addressLine1).toBe('152 Teheran-ro, Gangnam-gu')
-    expect(result.city).toBe('Seoul')
+    expect(result.addressLine1).toBe('152 Teheran-ro')
+    expect(result.city).toBe('Gangnam-gu')
     expect(result.state).toBe('Seoul')
     expect(result.zipCode).toBe('06142')
     expect(result.country).toBe('South Korea')
@@ -46,8 +46,8 @@ describe('parseEngAddr', () => {
 
   it('도 단위 주소를 파싱한다 (5 parts)', () => {
     const result = parseEngAddr(provincialJuso)
-    expect(result.addressLine1).toBe('1 Hyowon-ro, Paldal-gu')
-    expect(result.city).toBe('Gyeonggi-do')
+    expect(result.addressLine1).toBe('1 Hyowon-ro')
+    expect(result.city).toBe('Paldal-gu')
     expect(result.state).toBe('Gyeonggi-do')
     expect(result.zipCode).toBe('16359')
   })
@@ -59,38 +59,38 @@ describe('parseEngAddr', () => {
 
   it('건물부번이 있으면 하이픈으로 연결한다', () => {
     const result = parseEngAddr(withSubNumJuso)
-    expect(result.addressLine1).toBe('152-3 Teheran-ro, Gangnam-gu')
+    expect(result.addressLine1).toBe('152-3 Teheran-ro')
   })
 })
 
 describe('formatFullAddress', () => {
   it('상세주소 없이 전체 주소를 포맷한다', () => {
     const address: ParsedAddress = {
-      addressLine1: '152 Teheran-ro, Gangnam-gu',
+      addressLine1: '152 Teheran-ro',
       addressLine2: '',
-      city: 'Seoul',
+      city: 'Gangnam-gu',
       state: 'Seoul',
       zipCode: '06142',
       country: 'South Korea',
       fullAddress: '',
     }
     expect(formatFullAddress(address)).toBe(
-      '152 Teheran-ro, Gangnam-gu, Seoul 06142, South Korea'
+      '152 Teheran-ro, Gangnam-gu 06142, South Korea'
     )
   })
 
-  it('상세주소가 있으면 포함한다', () => {
+  it('상세주소가 있으면 맨 앞에 포함한다', () => {
     const address: ParsedAddress = {
-      addressLine1: '152 Teheran-ro, Gangnam-gu',
+      addressLine1: '152 Teheran-ro',
       addressLine2: 'Helio City Apt 101, Unit 1103',
-      city: 'Seoul',
+      city: 'Gangnam-gu',
       state: 'Seoul',
       zipCode: '06142',
       country: 'South Korea',
       fullAddress: '',
     }
     expect(formatFullAddress(address)).toBe(
-      '152 Teheran-ro, Gangnam-gu, Helio City Apt 101 Unit 1103, Seoul 06142, South Korea'
+      'Helio City Apt 101 Unit 1103, 152 Teheran-ro, Gangnam-gu 06142, South Korea'
     )
   })
 })
