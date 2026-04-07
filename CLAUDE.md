@@ -47,25 +47,31 @@
 app/
   page.tsx              # 홈 (도구 목록)
   address/
-    page.tsx            # 주소 변환 메인 (3단계: search→detail→result)
+    page.tsx            # 주소 변환 메인 — 서버 컴포넌트 wrapper (크롤러용 텍스트 + 가이드/FAQ 링크)
     layout.tsx          # SEO 메타데이터 + JSON-LD
+    guide/
+      page.tsx          # 영문주소 변환기 사용 가이드 (서버 컴포넌트, SEO용)
+    faq/
+      page.tsx          # 자주 묻는 질문 + FAQPage JSON-LD (서버 컴포넌트, SEO용)
   api/
     juso/route.ts       # JUSO API 프록시
     translate/route.ts  # DeepL API 프록시
-  layout.tsx            # 루트 레이아웃 (GA, Vercel Analytics)
+  layout.tsx            # 루트 레이아웃 (GA, Vercel Analytics, Naver 소유확인 태그)
+  sitemap.ts            # /address, /address/guide, /address/faq 포함
   globals.css
 
 components/
-  Header.tsx
+  Header.tsx            # 영문주소 변환 / 가이드 / FAQ 네비게이션 링크
   Footer.tsx
   ToolCard.tsx
   address/
-    AddressSearch.tsx   # 카카오 우편번호 위젯
-    DetailInput.tsx     # 상세주소 입력
-    ResultSection.tsx   # 변환 결과 + 전체복사
-    ResultCard.tsx      # 항목별 복사 카드
-    EditPanel.tsx       # 주소 수정 패널
-    SiteGuide.tsx       # Amazon/AliExpress/몰테일 입력 가이드
+    AddressPageClient.tsx  # 'use client' — 주소 변환 UI 전체 로직
+    AddressSearch.tsx      # 카카오 우편번호 위젯
+    DetailInput.tsx        # 상세주소 입력
+    ResultSection.tsx      # 변환 결과 + 전체복사
+    ResultCard.tsx         # 항목별 복사 카드
+    EditPanel.tsx          # 주소 수정 패널
+    SiteGuide.tsx          # Amazon/AliExpress/몰테일 입력 가이드
 
 lib/
   address.ts            # parseEngAddr(), formatFullAddress()
@@ -75,10 +81,13 @@ types/
 ```
 
 ## SEO
-- Google Search Console 등록 완료 (doguham.kr)
-- sitemap: `doguham.kr/sitemap.xml`
+- Google Search Console 등록 완료, sitemap 제출 완료
+- 네이버 서치어드바이저 소유확인 완료, sitemap 제출 완료
+- sitemap: `doguham.kr/sitemap.xml` (/address, /address/guide, /address/faq)
 - robots: `doguham.kr/robots.txt`
 - OG 이미지: `app/address/opengraph-image.tsx`
+- FAQ JSON-LD (Schema.org FAQPage) — 구글 리치 스니펫 대응
+- 구글 색인 갱신 요청 완료 (홈, 가이드, FAQ) — 반영까지 수일 소요 예상
 
 ## 분석
 - Vercel Analytics — 페이지뷰, Core Web Vitals
