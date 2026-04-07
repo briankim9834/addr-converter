@@ -1,3 +1,5 @@
+// components/ToolTabs.tsx
+// 도구 페이지 공통 Pill 탭 — currentPath는 각 page.tsx에서 하드코딩해서 전달
 import Link from 'next/link'
 
 interface Tab {
