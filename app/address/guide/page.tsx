@@ -1,6 +1,7 @@
 // app/address/guide/page.tsx
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ToolTabs from '@/components/ToolTabs'
 
 export const metadata: Metadata = {
   title: '영문주소 변환기 사용 가이드 — 해외배송·직구 영문주소 만들기',
@@ -14,9 +15,17 @@ export const metadata: Metadata = {
   },
 }
 
+const ADDRESS_TABS = [
+  { label: '🗺️ 변환기', href: '/address' },
+  { label: '📖 가이드', href: '/address/guide' },
+  { label: '❓ FAQ', href: '/address/faq' },
+]
+
 export default function GuidePage() {
   return (
-    <div className="max-w-2xl mx-auto px-4 py-10">
+    <>
+      <ToolTabs tabs={ADDRESS_TABS} currentPath="/address/guide" />
+      <div className="max-w-2xl mx-auto px-4 py-10">
       <h1 className="text-2xl font-extrabold text-slate-900 mb-2">
         영문주소 변환기 사용 가이드
       </h1>
@@ -126,5 +135,6 @@ export default function GuidePage() {
         </Link>
       </div>
     </div>
+    </>
   )
 }

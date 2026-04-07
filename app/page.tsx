@@ -18,10 +18,12 @@ export default function Home() {
           description="한글 주소를 항목별 영문으로 변환. 해외배송·직구 주소 입력이 쉬워져요."
           href="/address"
         />
-        <div className="bg-white rounded-xl p-5 border-2 border-dashed border-slate-200 flex flex-col items-center justify-center text-center min-h-[160px]">
-          <div className="text-2xl mb-2 text-slate-300">➕</div>
-          <p className="text-slate-400 text-xs">도구 추가 예정</p>
-        </div>
+        <ToolCard
+          icon="🧾"
+          title="부가세 계산기"
+          description="공급가액·합계금액으로 부가세를 바로 계산해요. 세금계산서·견적서에 활용하세요."
+          href="/vat"
+        />
       </div>
     </div>
   )

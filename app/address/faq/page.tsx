@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import ToolTabs from '@/components/ToolTabs'
 
 export const metadata: Metadata = {
   title: '영문주소 변환 자주 묻는 질문 (FAQ) — 도구함',
@@ -66,9 +67,16 @@ const jsonLd = {
   })),
 }
 
+const ADDRESS_TABS = [
+  { label: '🗺️ 변환기', href: '/address' },
+  { label: '📖 가이드', href: '/address/guide' },
+  { label: '❓ FAQ', href: '/address/faq' },
+]
+
 export default function FaqPage() {
   return (
     <>
+      <ToolTabs tabs={ADDRESS_TABS} currentPath="/address/faq" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
