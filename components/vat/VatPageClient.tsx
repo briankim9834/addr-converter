@@ -7,8 +7,8 @@ import { calcFromSupply, calcFromTotal, formatKRW, parseInput, VatResult } from 
 type Mode = 'supply' | 'total'
 
 const MODE_TABS: { mode: Mode; label: string }[] = [
-  { mode: 'supply', label: '공급가액 → 부가세' },
-  { mode: 'total', label: '합계금액 → 부가세' },
+  { mode: 'supply', label: '공급가액을 아는 경우' },
+  { mode: 'total', label: '합계금액을 아는 경우' },
 ]
 
 export default function VatPageClient() {
@@ -54,7 +54,14 @@ export default function VatPageClient() {
   ]
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-6">
+    <div className="max-w-lg mx-auto px-4 py-8">
+      <div className="mb-6">
+        <h1 className="text-xl font-extrabold text-slate-900 mb-1">
+          🧾 부가세 계산기
+        </h1>
+        <p className="text-sm text-slate-500">숫자를 입력하면 바로 계산돼요</p>
+      </div>
+
       {/* 계산 모드 탭 */}
       <div className="flex bg-slate-100 rounded-xl p-1 mb-5">
         {MODE_TABS.map(({ mode: m, label }) => (
@@ -126,6 +133,17 @@ export default function VatPageClient() {
       >
         초기화
       </button>
+
+      {/* 사용방법 힌트 */}
+      <div className="mt-4 bg-blue-50 border border-blue-100 rounded-xl p-4 text-xs text-slate-500 leading-6">
+        💡 <strong className="text-slate-700">이렇게 사용하세요</strong>
+        <br />
+        1. 계산 모드를 선택하세요 (공급가액 또는 합계금액 기준)
+        <br />
+        2. 금액을 입력하면 부가세가 자동으로 계산돼요
+        <br />
+        3. 항목별 복사 버튼으로 바로 사용하세요
+      </div>
     </div>
   )
 }

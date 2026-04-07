@@ -14,7 +14,7 @@ interface ToolTabsProps {
 
 export default function ToolTabs({ tabs, currentPath }: ToolTabsProps) {
   return (
-    <div className="flex gap-2 px-4 pt-4 pb-1">
+    <div className="max-w-2xl mx-auto flex gap-2 px-4 pt-4 pb-1">
       {tabs.map((tab) => {
         const isActive = currentPath === tab.href
         return (

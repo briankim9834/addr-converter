@@ -40,6 +40,10 @@ export default function HamburgerMenu() {
   const pathname = usePathname()
 
   useEffect(() => {
+    setOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
     if (!open) return
     const handler = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false)
@@ -68,9 +72,10 @@ export default function HamburgerMenu() {
       )}
 
       <div
-        className={`fixed top-0 right-0 bottom-0 w-56 bg-white z-50 shadow-xl transform transition-transform duration-200 ${
+        className={`fixed top-0 bottom-0 w-56 bg-white z-50 shadow-xl transform transition-transform duration-200 ${
           open ? 'translate-x-0' : 'translate-x-full'
         }`}
+        style={{ right: 'max(0px, calc((100vw - 42rem) / 2))' }}
       >
         <div className="px-4 py-3 border-b border-slate-100">
           <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
