@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -39,6 +39,15 @@ export default function HamburgerMenu() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
+  useEffect(() => {
+    if (!open) return
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setOpen(false)
+    }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [open])
+
   return (
     <>
       <button
@@ -72,7 +81,7 @@ export default function HamburgerMenu() {
           {TOOLS.map((tool) => {
             const isActive = tool.available && pathname.startsWith(tool.href)
             return (
-              <li key={tool.href}>
+              <li key={tool.name}>
                 {tool.available ? (
                   <Link
                     href={tool.href}
