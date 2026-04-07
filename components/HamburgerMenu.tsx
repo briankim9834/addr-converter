@@ -72,10 +72,14 @@ export default function HamburgerMenu() {
       )}
 
       <div
-        className={`fixed top-0 bottom-0 w-56 bg-white z-50 shadow-xl transform transition-transform duration-200 ${
-          open ? 'translate-x-0' : 'translate-x-full'
-        }`}
-        style={{ right: 'max(0px, calc((100vw - 42rem) / 2))' }}
+        className="fixed top-0 bottom-0 w-56 bg-white z-50 shadow-xl"
+        style={{
+          right: 'max(0px, calc((100vw - 42rem) / 2))',
+          transform: open
+            ? 'translateX(0)'
+            : 'translateX(calc(100% + max(0px, (100vw - 42rem) / 2)))',
+          transition: 'transform 0.2s cubic-bezier(0.4,0,0.2,1)',
+        }}
       >
         <div className="px-4 py-3 border-b border-slate-100">
           <p className="text-xs font-bold text-slate-400 uppercase tracking-widest">
