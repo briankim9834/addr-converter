@@ -51,7 +51,7 @@ export default function VatGuidePage() {
             <div className="bg-slate-50 rounded-xl p-4">
               <p className="text-xs font-bold text-slate-400 mb-1 uppercase">공급가액</p>
               <p className="text-sm text-slate-700 font-semibold mb-1">부가세 제외 금액</p>
-              <p className="text-xs text-slate-500">세금계산서의 "공급가액" 칸에 적는 금액. 부가세를 더하기 전 금액.</p>
+              <p className="text-xs text-slate-500">세금계산서의 &quot;공급가액&quot; 칸에 적는 금액. 부가세를 더하기 전 금액.</p>
             </div>
             <div className="bg-blue-50 rounded-xl p-4">
               <p className="text-xs font-bold text-blue-400 mb-1 uppercase">합계금액</p>
