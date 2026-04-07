@@ -1,5 +1,6 @@
 // app/api/translate/route.ts
 import { NextRequest, NextResponse } from 'next/server'
+import { notifySlackError } from '@/lib/slack'
 
 const DEEPL_URL = 'https://api-free.deepl.com/v2/translate'
 
@@ -36,18 +37,21 @@ export async function POST(req: NextRequest) {
         target_lang: 'EN-US',
       }),
     })
-  } catch {
+  } catch (e) {
+    await notifySlackError('DeepL API 연결 실패', String(e))
     return NextResponse.json({ error: 'DeepL API 연결 실패' }, { status: 500 })
   }
 
   if (!response.ok) {
+    await notifySlackError(`DeepL API HTTP 오류 — status: ${response.status}`)
     return NextResponse.json({ error: 'DeepL API 오류' }, { status: 500 })
   }
 
   let data: { translations?: { text: string }[] }
   try {
     data = await response.json()
-  } catch {
+  } catch (e) {
+    await notifySlackError('DeepL API 응답 파싱 실패', String(e))
     return NextResponse.json({ error: 'DeepL API 응답 파싱 실패' }, { status: 500 })
   }
 
