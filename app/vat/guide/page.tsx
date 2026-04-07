@@ -1,3 +1,4 @@
+// app/vat/guide/page.tsx
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ToolTabs from '@/components/ToolTabs'

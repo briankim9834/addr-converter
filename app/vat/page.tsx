@@ -1,3 +1,4 @@
+// app/vat/page.tsx
 import Link from 'next/link'
 import ToolTabs from '@/components/ToolTabs'
 import VatPageClient from '@/components/vat/VatPageClient'
